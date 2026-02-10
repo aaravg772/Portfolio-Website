@@ -1,12 +1,25 @@
-/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  padding: 0;
   background-color: #f4f6f8;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: #333;
   min-height: 100%;
+  overflow-x: hidden; 
+  width: 100%;
 }
 
 main {
@@ -65,7 +78,6 @@ a:hover {
   color: #2980b9;
 }
 
-/* Header and Navigation */
 header {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -118,7 +130,6 @@ nav ul li a.active {
   color: #555;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -132,7 +143,6 @@ footer {
   box-sizing: border-box;
 }
 
-/* Home Page Styles */
 .intro {
   display: flex;
   align-items: center;
@@ -150,11 +160,14 @@ footer {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
+  margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -192,7 +205,7 @@ footer {
 
 .uoft-link {
   font-weight: bold;
-  color: #3498da; /* Example UofT color */
+  color: #3498da; 
 }
 
 .uoft-link:hover {
@@ -246,7 +259,6 @@ footer {
   font-weight: 600;
 }
 
-/* About Page Styles */
 .about-page {
   padding: 40px 20px;
 }
@@ -333,7 +345,6 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Portfolio Page Styles */
 .portfolio-page {
   padding: 40px 20px;
 }
@@ -357,7 +368,6 @@ footer {
   color: #777;
 }
 
-/* Contact Page Styles */
 .contact-page {
   padding: 40px 20px;
 }
@@ -379,15 +389,14 @@ footer {
   color: #d35400;
 }
 
-/* Table Styling */
 table {
 width: 80%;
 margin: 2rem auto;
-border-collapse: collapse; /* Collapse borders for a cleaner look */
+border-collapse: collapse;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 background-color: #fff;
 border-radius: 8px;
-overflow: hidden; /* To contain the border-radius */
+overflow: hidden; 
 }
 
 th, td {
@@ -406,7 +415,7 @@ background-color: #f9f9f9;
 }
 
 tbody td img {
-vertical-align: middle; /* Align images in table cells */
+vertical-align: middle; 
 margin-right: 10px;
 }
 
@@ -418,7 +427,6 @@ border-bottom: none;
 background-color: #f4f6f8;
 }
 
-/* Specific styling for the favorite sports table */
 .favorite-sports-table {
 padding: 20px;
 }
@@ -428,7 +436,6 @@ text-align: center;
 margin-bottom: 1.5rem;
 }
 
-/* Specific styling for the coding skills & clubs table */
 .coding-clubs-table {
 padding: 20px;
 }
@@ -448,16 +455,15 @@ vertical-align: middle;
 margin: 0 5px;
 }
 
-/* Project cards */
 .project-card {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  text-align: center; /* Center the initial content */
-  display: flex; /* Enable flexbox for internal layout control */
-  flex-direction: column; /* Stack elements vertically */
+  text-align: center; 
+  display: flex; 
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -493,11 +499,11 @@ margin: 0 5px;
 }
 
 .project-links-container {
-  margin-top: auto; /* Push the links container to the bottom */
+  margin-top: auto; 
 }
 
 .project-card .project-links-container {
-  background-color: #f0f0f0; /* Light grey background */
+  background-color: #f0f0f0; 
   padding: 15px;
   border-radius: 0 0 8px 8px;
   
@@ -523,4 +529,112 @@ margin: 0 5px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+    overflow-x: hidden; 
+    margin: 1rem auto;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .favorite-sports-table, 
+  .coding-clubs-table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .schools-grid, 
+  .projects-grid, 
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .projects-grid, .schools-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  /* Responsive Images */
+  .school-card img {
+    height: auto;
+  }
+.intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .image-container {
+    width: 150px; 
+    height: 150px;
+    margin: 0 auto;
+    flex-shrink: 0; 
+  }
+  th, td {
+    padding: 8px 5px;
+    word-wrap: break-word; 
+    white-space: normal;
+  }
+  .favorite-sports-table th:nth-child(2),
+  .favorite-sports-table td:nth-child(2) {
+    display: none;
+  }
+  td img {
+    max-width: 100%;
+    height: auto;
+  }
+  td {
+    padding: 5px 0;
+    border: none !important;
+    white-space: normal; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: normal; 
+  }
+  tr {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+  }
+  thead {
+    display: none; 
+  }
+  tbody, tr, td {
+    display: block; 
+    width: 100%;
+  }
+  table {
+    display: block;
+    width: 100% !important;
+    border: none;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
 }
