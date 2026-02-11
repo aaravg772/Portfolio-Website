@@ -533,6 +533,10 @@ margin: 0 5px;
 }
 
 @media (max-width: 768px) {
+  nav .logo {
+  width: 10%;
+  height: 10%;
+}
   main {
     padding: 15px;
     overflow-x: hidden; 
