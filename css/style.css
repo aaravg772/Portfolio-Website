@@ -95,11 +95,12 @@ nav {
   margin: 0 auto;
 }
 
-nav a.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #2c3e50;
+nav .logo {
+  width: 5%;
+  height: 5%;
 }
+
+
 
 nav ul {
   list-style: none;
