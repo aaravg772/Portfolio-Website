@@ -85,6 +85,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 85px;
+  display: flex;
+  align-items: center;
 }
 
 nav {
@@ -383,11 +386,10 @@ footer {
 }
 
 .contact-page {
-  /* This calculates: 100% of the screen height minus the header and footer height */
   min-height: calc(100vh - 14rem); 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* This will center your contact info vertically */
+  justify-content: center; 
 }
 
 .contact-info {
@@ -550,10 +552,6 @@ margin: 0 5px;
 }
 
 @media (max-width: 768px) {
-  nav .logo {
-  width: 15%;
-  height: 15%;
-}
   main {
     padding: 15px;
     overflow-x: hidden; 
