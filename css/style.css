@@ -383,7 +383,11 @@ footer {
 }
 
 .contact-page {
-  padding: 40px 20px;
+  /* This calculates: 100% of the screen height minus the header and footer height */
+  min-height: calc(100vh - 14rem); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This will center your contact info vertically */
 }
 
 .contact-info {
@@ -546,13 +550,10 @@ margin: 0 5px;
 }
 
 @media (max-width: 768px) {
-<<<<<<< HEAD
-=======
   nav .logo {
   width: 15%;
   height: 15%;
 }
->>>>>>> e9190c1815b6193819376962fe2450275b670258
   main {
     padding: 15px;
     overflow-x: hidden; 
