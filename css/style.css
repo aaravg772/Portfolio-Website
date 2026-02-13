@@ -34,6 +34,9 @@
 * {
   box-sizing: border-box;
 }
+*, *::before, *::after {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
 
 html {
   width: 100%;
@@ -53,6 +56,7 @@ body {
   min-height: 100%;
   overflow-x: hidden; 
   width: 100%;
+  transition: background-color 0.4s ease;
 }
 
 main {
@@ -123,11 +127,6 @@ header {
   align-items: center;
 }
 
-.theme-btn {
-    top: 15px;  
-    right: 25px;
-    font-size: 1.2rem; 
-  }
 
 nav {
   display: grid;
@@ -169,12 +168,34 @@ nav ul li a {
   color: var(--text-sub);
   font-weight: 500;
   padding: 0.5rem 0;
-  transition: color 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
   color: var(--link-color);
+}
+
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--link-color);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+    transform: translateY(-2px);
 }
 
 .skip-link {
@@ -516,7 +537,7 @@ vertical-align: middle;
 margin: 0 5px;
 }
 
-.project-card {
+.project-card, .award-card {
   background-color: var(--card-bg);
   border-radius: 8px;
   box-shadow: var(--card-shadow);
@@ -527,32 +548,25 @@ margin: 0 5px;
   flex-direction: column;
 }
 
-.project-card:hover {
+.project-card:hover, .award-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-shadow-hover);
 }
 
-.project-card h3 {
+.project-card h3, .award-card h3 {
   padding: 15px;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
 
-.project-card .project-description {
+.project-card .project-description, .award-card .award-description {
   padding: 0 15px 15px 15px;
   font-size: 0.95rem;
   color: var(--text-sub);
   line-height: 1.6;
 }
 
-.project-card .first-project-description {
-  padding: 0 15px 15px 15px;
-  font-size: 0.95rem;
-  color: var(--text-sub);
-  line-height: 1.6;
-}
-
-.project-card hr {
+.project-card hr, .award-card {
   border: 0;
   border-top: 1px solid var(--border-color);
   margin: 10px;
@@ -562,7 +576,7 @@ margin: 0 5px;
   margin-top: auto; 
 }
 
-.project-card .project-links-container {
+.project-card .project-links-container  {
   background-color: var(--bg-color); 
   padding: 15px;
   border-radius: 0 0 8px 8px;
@@ -583,7 +597,7 @@ margin: 0 5px;
   background-color: var(--link-hover);
 }
 
-.projects-grid {
+.projects-grid, .awards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
@@ -610,11 +624,61 @@ margin: 0 5px;
   cursor: pointer;
   font-size: 1.5rem;
   z-index: 1000;  
-  transition: transform 0.2s ease;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .theme-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(15deg);
+}
+
+.theme-btn:active {
+  transform: scale(0.9);
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 
+    opacity 0.8s ease-out, 
+    transform 0.8s ease-out, 
+    background-color 0.4s ease, 
+    color 0.4s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);   
+  opacity: 1;                 
+}
+
+.school-card.reveal.active:hover, 
+.project-card.reveal.active:hover, 
+.award-card.reveal.active:hover,
+.grid-item.reveal.active:hover {
+  transform: translateY(-10px); /* This adds the lift back */
+  box-shadow: var(--card-shadow-hover);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schools-grid .reveal:nth-child(1),
+.projects-grid .reveal:nth-child(1),
+.awards-grid .reveal:nth-child(1),
+.grid-container .reveal:nth-child(1) {
+  transition-delay: 0s, 0s, 0s, 0s;
+}
+
+.schools-grid .reveal:nth-child(2),
+.projects-grid .reveal:nth-child(2),
+.awards-grid .reveal:nth-child(2),
+.grid-container .reveal:nth-child(2) {
+  transition-delay: 0.1s, 0.1s, 0s, 0s;
+}
+
+.schools-grid .reveal:nth-child(3),
+.projects-grid .reveal:nth-child(3),
+.awards-grid .reveal:nth-child(3),
+.grid-container .reveal:nth-child(3) {
+  transition-delay: 0.2s, 0.2s, 0s, 0s;
 }
 
 @media (max-width: 768px) {
@@ -672,11 +736,12 @@ margin: 0 5px;
 
   .schools-grid, 
   .projects-grid, 
+  .awards-grid,
   .grid-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .projects-grid, .schools-grid {
+  .projects-grid, .awards-grid, .schools-grid {
     grid-template-columns: 1fr;
     width: 100%;
   }
@@ -802,3 +867,4 @@ margin: 0 5px;
     gap: 8px;
   }
 }
+
