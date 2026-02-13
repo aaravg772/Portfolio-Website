@@ -1,189 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Aarav Goel</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html"><img src="photos/1.png" alt="" class="logo mode-light"><img src="photos/2.png" alt="" class="logo mode-dark"></a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-right-wrapper"><ul class="skip-links">
-        <li><a href="#favorite-sports-table" class="skip-link">Sports</a></li>
-        <li><a href="#experience-table" class="skip-link">Experience</a></li>
-        <li><a href="#clubs-table" class="skip-link">Clubs</a></li>
-        <li><a href="#favorite-media" class="skip-link">Favorites</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-btn">🌙</button> 
-      </div>
-    </nav>
-
-  </header>
-
-  <main class="about-page">
-    <section class="interests reveal">
-      <h1>Interests</h1>
-      <p>I’m a creative individual passionate about business, finance, art and computer science. With experience in computer science and finance, I enjoy building things and learning more! I'm also quite athletic and enjoy racquet sports like tennis and badminton!</p>
-    </section>
-
-    <section class="favorite-sports-table reveal" id="favorite-sports-table">
-      <h2>Favorite Sports</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Sport</th>
-            <th>Image</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Badminton</td>
-            <td><img src="photos/badminton.png" alt="Badminton equipment" width="80" height="80"></td>
-            <td>I've been playing badminton since I was a kid, and I love the sport!</td>
-          </tr>
-          <tr>
-            <td>Tennis</td>
-            <td><img src="photos/tennis.png" alt="tennis equipment" width="80" height="80" class="mode-light"> <img src="photos/tennis_2.png" alt="tennis equipment" width="80" height="80" class="mode-dark"></td>
-            <td>I've been playing tennis since I was a kid, even attending an academy, though I don't enjoy it as much anymore due to the other sports I've picked up, I'm still quit fond of it!</td>
-          </tr>
-          <tr>
-            <td>Ultimate Frisbee</td>
-            <td><img src="photos/ultimate.png" alt="Ultimate Frisbee disc" width="80" height="80"></td>
-            <td>I started playing ultimate frisbee in middle school, and from the first time I played it, I loved the game!</td>
-          </tr>
-          <tr>
-            <td>Volleyball</td>
-            <td><img src="photos/71i0YRrC3lL.png" alt="Volleyball" width="80" height="80"></td>
-            <td>I started playing volleyball in grade 7 a few months before I joined the school team, and I love the sport so far!</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="experience-table reveal" id="experience-table">
-      <h2>Experience</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Skill</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <th rowspan="4" colspan="1">Coding</th>
-          
-            
-          <tr>
-            <td><a href="https://developer.apple.com/swift/" class="link" >Swift</a></td>
-            <td>I started self-learning Swift in 2022 and stopped soon after; I only know the basics.</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.python.org/" class="link">Python</a></td>
-            <td>I started learning python from a course on udemy, after that I had fun creating many projects in the language!</td>
-          </tr>
-          <tr>
-            <td>Full Stack Web Development</td>
-            <td>I started self-learning Full Stack Web Development in 2021 and have now created a few cool projects with it!</td>
-          </tr>
-          <th rowspan="5" colspan="1">Volunteering</th>
-          
-            
-          <tr>
-            <td>Peer Tutoring</td>
-            <td>I started peer-turoting in the first semester of grade 10. Peer tutoring has helped me increase my confidence, and better my time managment. I was able to complete my work while teaching my peer. At first, i struggled with teaching but over time i started to learn and became effective at it.</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.torontowaterfrontmarathon.com/" class="link">TCS Waterfront Marathon 2024</a></td>
-            <td>I worked at a water station giving out water to runners!</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.torontowaterfrontmarathon.com/" class="link">TCS Waterfront Marathon 2025</a></td>
-            <td>I worked at a water station giving out water to runners!</td>
-          </tr>
-          <tr>
-            <td>NTCI Web Club</td>
-            <td>I worked on maintaining the school website.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="clubs-table reveal" id="clubs-table">
-      <h2>Clubs</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Club</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Investment Club</td>
-            <td>I joined the Investment club to learn financial literacy and investing.</td>
-          </tr>
-          <tr>
-            <td>NTCI Web Club</td>
-            <td>I joined the NTCI Web club to improve my web development skills, The goal of the club is to maintain the school website.</td>
-          </tr>
-          <tr>
-            <td>Aerospace Club</td>
-            <td>I joined the Aerospace Club due to my interest in engineering and curiosity and was soon appointed as a Executive member, I have since led many lessons, worked on a model rocket and RC plane.</td>
-          </tr>
-          <tr>
-            <td>Debate Club</td>
-            <td>I joined the Debate club to improve my communication skills and build confidence.</td>
-          </tr>
-          <tr>
-            <td>Leadership Club</td>
-            <td>I joined the Learder club to improve my communication skills and build confidence.</td>
-          </tr>
-          <tr>
-            <td>Badminton Club</td>
-            <td>I joined the Badminton club to have fun and improve at badminton.</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </section>
-
-    <section id="favorite-media" class="section-grid">
-      <h2>Favorite Pieces Of Media</h2>
-      <div class="grid-container">
-        <div class="grid-item media-item reveal">
-          <img src="photos/aot.jpg" alt="Attack On Titan: Final Season Poster">
-          <h3><a href="https://www.imdb.com/title/tt2560140/" class="link">Attack On Titan</a></h3>
-          <p>The second anime I ever watched, to this day I believe it's one of the best pieces of media, anime or live action, on the planet.</p>
-        </div>
-        <div class="grid-item media-item reveal">
-          <img src="photos/81deUh9WvyL._AC_UF1000,1000_QL80_.jpg" alt="I Survived the Bombing of Pearl Harbor book cover">
-          <h3><a href="https://www.laurentarshis.com/i-survived" class="link">I Survived Book Series</a></h3>
-          <p>I have read 3 books out of this series, and they are all wonderful so far!</p>
-        </div>
-        <div class="grid-item media-item reveal">
-          <img src="photos/Oppenheimer_(film).jpg" alt="Oppenheimer movie poster">
-          <h3><a href="https://www.imdb.com/title/tt15398776/" class="link">Oppenheimer</a></h3>
-          <p>Brilliant movie.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    © 2026 Aarav Goel. All rights reserved.
-  </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About | Aarav Goel</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html"><img src="photos/1.png" alt="" class="logo mode-light"><img src="photos/2.png" alt="" class="logo mode-dark"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-right-wrapper">
+                    <ul class="skip-links">
+                        <li><a href="#favorite-sports-table" class="skip-link">Sports</a></li>
+                        <li><a href="#experience-table" class="skip-link">Experience</a></li>
+                        <li><a href="#clubs-table" class="skip-link">Clubs</a></li>
+                        <li><a href="#favorite-media" class="skip-link">Favorites</a></li>
+                    </ul>
+                    <button id="theme-toggle" class="theme-btn">🌙</button> 
+                </div>
+            </nav>
+        </header>
+        <main class="about-page">
+            <section class="interests reveal">
+                <h1>Interests</h1>
+                <p>I’m a creative individual passionate about business, finance, art and computer science. With experience in computer science and finance, I enjoy building things and learning more! I'm also quite athletic and enjoy racquet sports like tennis and badminton!</p>
+            </section>
+            <section class="favorite-sports-table reveal" id="favorite-sports-table">
+                <h2>Favorite Sports</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sport</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Badminton</td>
+                            <td><img src="photos/badminton.png" alt="Badminton equipment" width="80" height="80"></td>
+                            <td>I've been playing badminton since I was a kid, and I love the sport!</td>
+                        </tr>
+                        <tr>
+                            <td>Tennis</td>
+                            <td><img src="photos/tennis.png" alt="tennis equipment" width="80" height="80" class="mode-light"> <img src="photos/tennis_2.png" alt="tennis equipment" width="80" height="80" class="mode-dark"></td>
+                            <td>I've been playing tennis since I was a kid, even attending an academy, though I don't enjoy it as much anymore due to the other sports I've picked up, I'm still quit fond of it!</td>
+                        </tr>
+                        <tr>
+                            <td>Ultimate Frisbee</td>
+                            <td><img src="photos/ultimate.png" alt="Ultimate Frisbee disc" width="80" height="80"></td>
+                            <td>I started playing ultimate frisbee in middle school, and from the first time I played it, I loved the game!</td>
+                        </tr>
+                        <tr>
+                            <td>Volleyball</td>
+                            <td><img src="photos/71i0YRrC3lL.png" alt="Volleyball" width="80" height="80"></td>
+                            <td>I started playing volleyball in grade 7 a few months before I joined the school team, and I love the sport so far!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="experience-table reveal" id="experience-table">
+                <h2>Experience</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Skill</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <th rowspan="4" colspan="1">Coding</th>
+                        <tr>
+                            <td><a href="https://developer.apple.com/swift/" class="link" >Swift</a></td>
+                            <td>I started self-learning Swift in 2022 and stopped soon after; I only know the basics.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.python.org/" class="link">Python</a></td>
+                            <td>I started learning python from a course on udemy, after that I had fun creating many projects in the language!</td>
+                        </tr>
+                        <tr>
+                            <td>Full Stack Web Development</td>
+                            <td>I started self-learning Full Stack Web Development in 2021 and have now created a few cool projects with it!</td>
+                        </tr>
+                        <th rowspan="5" colspan="1">Volunteering</th>
+                        <tr>
+                            <td>Peer Tutoring</td>
+                            <td>I started peer-turoting in the first semester of grade 10. Peer tutoring has helped me increase my confidence, and better my time managment. I was able to complete my work while teaching my peer. At first, i struggled with teaching but over time i started to learn and became effective at it.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.torontowaterfrontmarathon.com/" class="link">TCS Waterfront Marathon 2024</a></td>
+                            <td>I worked at a water station giving out water to runners!</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.torontowaterfrontmarathon.com/" class="link">TCS Waterfront Marathon 2025</a></td>
+                            <td>I worked at a water station giving out water to runners!</td>
+                        </tr>
+                        <tr>
+                            <td>NTCI Web Club</td>
+                            <td>I worked on maintaining the school website.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="clubs-table reveal" id="clubs-table">
+                <h2>Clubs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Club</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Investment Club</td>
+                            <td>I joined the Investment club to learn financial literacy and investing.</td>
+                        </tr>
+                        <tr>
+                            <td>NTCI Web Club</td>
+                            <td>I joined the NTCI Web club to improve my web development skills, The goal of the club is to maintain the school website.</td>
+                        </tr>
+                        <tr>
+                            <td>Aerospace Club</td>
+                            <td>I joined the Aerospace Club due to my interest in engineering and curiosity and was soon appointed as a Executive member, I have since led many lessons, worked on a model rocket and RC plane.</td>
+                        </tr>
+                        <tr>
+                            <td>Debate Club</td>
+                            <td>I joined the Debate club to improve my communication skills and build confidence.</td>
+                        </tr>
+                        <tr>
+                            <td>Leadership Club</td>
+                            <td>I joined the Learder club to improve my communication skills and build confidence.</td>
+                        </tr>
+                        <tr>
+                            <td>Badminton Club</td>
+                            <td>I joined the Badminton club to have fun and improve at badminton.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="favorite-media" class="section-grid">
+                <h2>Favorite Pieces Of Media</h2>
+                <div class="grid-container">
+                    <div class="grid-item media-item reveal">
+                        <img src="photos/aot.jpg" alt="Attack On Titan: Final Season Poster">
+                        <h3><a href="https://www.imdb.com/title/tt2560140/" class="link">Attack On Titan</a></h3>
+                        <p>The second anime I ever watched, to this day I believe it's one of the best pieces of media, anime or live action, on the planet.</p>
+                    </div>
+                    <div class="grid-item media-item reveal">
+                        <img src="photos/81deUh9WvyL._AC_UF1000,1000_QL80_.jpg" alt="I Survived the Bombing of Pearl Harbor book cover">
+                        <h3><a href="https://www.laurentarshis.com/i-survived" class="link">I Survived Book Series</a></h3>
+                        <p>I have read 3 books out of this series, and they are all wonderful so far!</p>
+                    </div>
+                    <div class="grid-item media-item reveal">
+                        <img src="photos/Oppenheimer_(film).jpg" alt="Oppenheimer movie poster">
+                        <h3><a href="https://www.imdb.com/title/tt15398776/" class="link">Oppenheimer</a></h3>
+                        <p>Brilliant movie.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            © 2026 Aarav Goel. All rights reserved.
+            <div class="social-links">
+                <a href="https://discord.com/users/832612557453393930" class="social-icon discord" aria-label="Discord">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/aaravg772/" class="social-icon instagram" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://github.com/aaravg772" class="social-icon github" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </body>
 </html>
