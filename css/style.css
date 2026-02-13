@@ -228,6 +228,17 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  justify-content: center;
+}
+
+footer p {
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    display: inline; 
+    line-height: inherit;
+    font-size: inherit;
+    color: inherit;
 }
 
 .social-links {

@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', theme);
         toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
     });
+
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 });
 
 function reveal() {
