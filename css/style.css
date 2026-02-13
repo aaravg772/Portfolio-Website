@@ -576,21 +576,21 @@ text-align: center;
 margin-bottom: 1.5rem;
 }
 
-.clubs-table, .experience-table  {
+.clubs-table, .experience-table, .hobbies-table  {
 padding: 20px;
 }
 
-.clubs-table, .experience-table h2 {
+.clubs-table, .experience-table, .hobbies-table h2 {
 text-align: center;
 margin-bottom: 1.5rem;
 }
 
-.clubs-table, .experience-table th[rowspan] {
+.clubs-table, .experience-table, .hobbies-table th[rowspan] {
 text-align: center;
 vertical-align: middle;
 }
 
-.clubs-table, .experience-table td img {
+.clubs-table, .experience-table, .hobbies-table td img {
 vertical-align: middle;
 margin: 0 5px;
 }
@@ -787,7 +787,8 @@ margin: 0 5px;
   }
 
   .favorite-sports-table, 
-  .clubs-table {
+  .clubs-table, 
+  .hobbies-table {
     overflow-x: auto;
     display: block;
   }
@@ -925,6 +926,3 @@ margin: 0 5px;
     gap: 8px;
   }
 }
-
-
-
