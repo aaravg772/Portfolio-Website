@@ -974,6 +974,7 @@ footer p {
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 .focus-item h3 {
