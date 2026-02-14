@@ -18,104 +18,214 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="art.html">Art</a></li>
                 </ul>
             </nav>
             <div class="nav-right-wrapper"><button id="theme-toggle" class="theme-btn">🌙</button></div>
         </header>
         <main class="portfolio-page">
-            <section class="portfolio-intro reveal">
+            <section class="portfolio-hero reveal">
                 <h1>Portfolio</h1>
-                <p>Explore my awards, projects and see what I've been working on!</p>
+                <p class="portfolio-subtitle">A showcase of my achievements, projects, and technical skills</p>
             </section>
+
             <section class="awards-section">
-                <h2 class="reveal">Awards</h2>
+                <h2 class="reveal">Awards & Achievements</h2>
                 <div class="awards-grid">
-                <div class="award-card reveal">
-                    <h3>Grade 9 Pascal Distinction</h3>
-                    <p class="award-description">A waterloo math contest.</p>
-                </div>
-                <div class="award-card reveal">
-                    <h3>Grade 10 CIMC Distinction</h3>
-                    <p class="award-description">A waterloo math contest, I placed 5th in my school.</p>
-                </div>
-                <div class="award-card reveal">
-                    <h3>Grade 10 UTHSDC 8th Place</h3>
-                    <p class="award-description">An engineering competition hosted by the University of Toronto, where I placed 8th out of 100+ participants. The goal was to come up with a solution to the flooding on the TTC in Toronto.</p>
+                    <div class="award-card reveal">
+                        <div class="award-year">2024</div>
+                        <h3>Grade 9 Pascal Distinction</h3>
+                        <p class="award-description">Earned distinction in the Waterloo mathematics contest, demonstrating strong problem-solving abilities in Grade 9.</p>
+                        <div class="award-category">Mathematics</div>
+                    </div>
+                    <div class="award-card reveal">
+                        <div class="award-year">2025</div>
+                        <h3>Grade 10 CIMC Distinction</h3>
+                        <p class="award-description">Achieved distinction and placed 5th in my school in the Canadian Intermediate Mathematics Contest.</p>
+                        <div class="award-category">Mathematics</div>
+                    </div>
+                    <div class="award-card reveal">
+                        <div class="award-year">2025</div>
+                        <h3>UTHSDC 8th Place</h3>
+                        <p class="award-description">Placed 8th out of 100+ participants at the University of Toronto High School Design Competition. Developed innovative solutions for TTC flooding challenges.</p>
+                        <div class="award-category">Engineering</div>
+                    </div>
                 </div>
             </section>
+
             <section class="projects-section">
                 <h2 class="reveal">My Projects</h2>
+                <p class="section-description reveal">A collection of personal projects showcasing my programming skills and creativity</p>
+                
                 <div class="projects-grid">
                     <div class="project-card reveal">
-                        <h3>BlackJack Game</h3>
-                        <p class="project-description">A cool BlackJack Game with a full logic file along with visual and text based versions of the game!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/BlackJack-Total">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>BlackJack Game</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">GUI</span>
+                            </div>
+                        </div>
+                        <p class="project-description">A complete BlackJack game implementation with both visual and text-based interfaces. Features full game logic, multiple play modes, and clean code architecture.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/BlackJack-Total" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Text-To-Num</h3>
-                        <p class="project-description">A program the converts number in english to actuals numbers!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/Text-To-Num">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>Text-To-Num Converter</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">NLP</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Intelligent text parser that converts written numbers in English to their numerical equivalents. Handles complex number formats and edge cases.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/Text-To-Num" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Monopoly</h3>
-                        <p class="project-description">A cool text based monopoly game with up to 8 players made in Python!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/Monopoly">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>Monopoly Game</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Game Dev</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Text-based Monopoly implementation supporting up to 8 players. Features property trading, rent calculations, and complete game mechanics.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/Monopoly" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Uno</h3>
-                        <p class="project-description">A cool text based Uno game with 3 ai and one player (you) written in Python!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/uno">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>UNO Card Game</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">AI</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Text-based UNO game featuring 3 AI opponents with strategic decision-making algorithms. Includes all official UNO rules and special cards.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/uno" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Pomodoro</h3>
-                        <p class="project-description">A pomodoro timer (25 minutes of work, then 5 minutes of rest) written in Python!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/Pomodoro">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>Pomodoro Timer</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Productivity</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Productivity tool implementing the Pomodoro Technique with 25-minute work sessions and 5-minute breaks. Helps maintain focus and prevent burnout.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/Pomodoro" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Ascii Convertor</h3>
-                        <p class="project-description">A program that converts words into different types of ascii art, with backend written in Python!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/Ascii-converter-web-">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>ASCII Art Converter</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Web</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Web-based tool that converts text into various ASCII art styles. Python backend handles text processing and style generation.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/Ascii-converter-web-" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Interest Calculator</h3>
-                        <p class="project-description">A program that calculates interest and has real time currency conversion written in Python!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/Interest-Calculator">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>Interest Calculator</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Finance</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Financial tool with real-time currency conversion capabilities. Calculates compound interest across different currencies and time periods.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/Interest-Calculator" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>Cookie Clicker Automation</h3>
-                        <p class="project-description">A program that automates the popular web game; Cookie Clicker, written in Python!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/Cookie-Clicker-Automater">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>Cookie Clicker Bot</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Automation</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Automation script for the popular Cookie Clicker web game. Implements optimal clicking strategies and upgrade purchasing algorithms.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/Cookie-Clicker-Automater" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
+
                     <div class="project-card reveal">
-                        <h3>HackPrank</h3>
-                        <p class="project-description">A Python library to prank your friends and make them think you are a hacker!</p>
-                        <hr>
-                        <div class="project-links-container">
-                            <a href="https://github.com/aaravg772/hackprank">GitHub Repo</a>
+                        <div class="project-header">
+                            <h3>HackPrank Library</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">CLI</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Fun Python library that creates "hacker" visual effects in the terminal. Great for pranks and learning about command-line interfaces.</p>
+                        <div class="project-footer">
+                            <a href="https://github.com/aaravg772/hackprank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
