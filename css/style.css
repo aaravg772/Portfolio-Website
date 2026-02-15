@@ -457,12 +457,18 @@ footer p {
   padding: 40px 20px;
 }
 
-.interests {
-  background-color: var(--card-bg);
-  padding: 30px;
+.about-hero {
+  background: var(--card-bg);
+  padding: 60px 40px;
   border-radius: 8px;
-  box-shadow: var(--card-shadow);
+  text-align: center;
   margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
 .section-grid {
