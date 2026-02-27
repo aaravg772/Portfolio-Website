@@ -1788,6 +1788,276 @@ footer p {
 
 
 /* ==========================================================================
+   12b. SCHOOLOS FEATURED CARD
+   ========================================================================== */
+
+/* --- Portfolio page: full-width featured card --- */
+.schoolos-card {
+    grid-column: 1 / -1; /* Span full width */
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 36px 40px !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    box-shadow: 0 0 0 1px rgba(99,102,241,0.15), 0 20px 60px rgba(0,0,0,0.5) !important;
+}
+
+/* Animated shimmer/aurora effect */
+.schoolos-shimmer {
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(99, 102, 241, 0.08) 0deg,
+        rgba(139, 92, 246, 0.06) 60deg,
+        rgba(59, 130, 246, 0.08) 120deg,
+        rgba(16, 185, 129, 0.05) 180deg,
+        rgba(99, 102, 241, 0.08) 240deg,
+        transparent 300deg,
+        rgba(99, 102, 241, 0.08) 360deg
+    );
+    animation: schoolos-rotate 8s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes schoolos-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Glowing top border */
+.schoolos-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6366f1, #8b5cf6, #3b82f6, #6366f1, transparent);
+    z-index: 2;
+}
+
+/* Subtle corner glow */
+.schoolos-card::after {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.schoolos-card:hover {
+    transform: translateY(-10px) !important;
+    border-color: rgba(99, 102, 241, 0.6) !important;
+    box-shadow: 0 0 0 1px rgba(99,102,241,0.4), 0 30px 80px rgba(99,102,241,0.2), 0 0 60px rgba(99,102,241,0.1) !important;
+}
+
+/* All content inside card sits above the shimmer */
+.schoolos-card > * {
+    position: relative;
+    z-index: 3;
+}
+
+.schoolos-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.schoolos-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.badge-new {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(99,102,241,0.4);
+}
+
+.badge-flagship {
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99,102,241,0.3);
+}
+
+.badge-live {
+    background: rgba(16,185,129,0.15);
+    color: #6ee7b7;
+    border: 1px solid rgba(16,185,129,0.3);
+    animation: live-pulse 2s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.3); }
+    50% { box-shadow: 0 0 0 5px rgba(16,185,129,0); }
+}
+
+.schoolos-title {
+    color: #f0f6ff !important;
+    font-size: 1.9rem !important;
+    margin-bottom: 6px !important;
+}
+
+.schoolos-version {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #6366f1;
+    background: rgba(99,102,241,0.12);
+    border: 1px solid rgba(99,102,241,0.25);
+    padding: 3px 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+    margin-left: 8px;
+}
+
+.schoolos-tech {
+    background: rgba(99,102,241,0.2) !important;
+    color: #a5b4fc !important;
+    border: 1px solid rgba(99,102,241,0.3);
+}
+
+.schoolos-tagline {
+    font-size: 1.05rem !important;
+    color: #a5b4fc !important;
+    font-style: italic;
+    margin-bottom: 10px !important;
+    margin-top: -6px;
+}
+
+.schoolos-card .project-description {
+    color: #8b9cb8 !important;
+}
+
+.schoolos-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    margin: 18px 0 22px;
+    padding: 18px;
+    background: rgba(99,102,241,0.06);
+    border: 1px solid rgba(99,102,241,0.12);
+    border-radius: 12px;
+}
+
+.schoolos-feature-item {
+    font-size: 0.9rem;
+    color: #8b9cb8;
+    padding: 2px 0;
+    line-height: 1.6;
+}
+
+.schoolos-feature-item strong {
+    color: #c7d2fe;
+    font-weight: 600;
+}
+
+.schoolos-footer {
+    border-top: 1px solid rgba(99,102,241,0.2) !important;
+}
+
+.schoolos-link {
+    color: #a5b4fc !important;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    gap: 8px;
+    transition: all 0.3s ease !important;
+}
+
+.schoolos-link:hover {
+    color: #818cf8 !important;
+    transform: translateX(6px) !important;
+    filter: drop-shadow(0 0 8px rgba(99,102,241,0.5));
+}
+
+/* Dark theme already matches - ensure light theme is readable */
+[data-theme="light"] .schoolos-card {
+    background: linear-gradient(135deg, #1e1b4b 0%, #1e2035 50%, #1e1b4b 100%);
+}
+
+/* --- Index page: SchoolOS highlight card --- */
+.schoolos-highlight-card {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+    border: 1px solid rgba(99,102,241,0.35) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.schoolos-highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6366f1, #8b5cf6, transparent);
+    z-index: 1;
+}
+
+.schoolos-highlight-card:hover {
+    border-color: rgba(99,102,241,0.7) !important;
+    box-shadow: 0 20px 50px rgba(99,102,241,0.25) !important;
+}
+
+.schoolos-highlight-badges {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.schoolos-highlight-card .highlight-icon,
+.schoolos-highlight-card h3,
+.schoolos-highlight-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.schoolos-highlight-card h3 {
+    color: #f0f6ff !important;
+}
+
+.schoolos-tagline-small {
+    font-size: 0.88rem !important;
+    color: #a5b4fc !important;
+    font-style: italic;
+    margin-bottom: 8px !important;
+    margin-top: -10px !important;
+}
+
+.schoolos-highlight-card .highlight-link {
+    position: relative;
+    z-index: 2;
+}
+
+.schoolos-hl-link {
+    color: #a5b4fc !important;
+}
+
+.schoolos-hl-link:hover {
+    color: #818cf8 !important;
+}
+
+[data-theme="light"] .schoolos-highlight-card {
+    background: linear-gradient(135deg, #1e1b4b 0%, #1e2035 100%) !important;
+}
+
+[data-theme="light"] .schoolos-highlight-card p {
+    color: #c7d2fe !important;
+}
+
+/* ==========================================================================
    13. MANGA PANEL MASONRY GRID
    ========================================================================== */
 
