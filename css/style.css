@@ -2620,3 +2620,404 @@ body.modal-open {
     font-size: 1.3rem;
   }
 }
+/* ==========================================================================
+   ALPHASWARM FEATURED CARD — Gold/Amber Quant Terminal
+   ========================================================================== */
+
+/* --- Portfolio page: full-width featured card --- */
+.alphaswarm-card {
+  grid-column: 1 / -1;
+  background: #0a0c0f !important;
+  border: 1px solid rgba(251, 191, 36, 0.35) !important;
+  border-radius: 4px !important;
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.08), inset 0 0 60px rgba(0,0,0,0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* CRT scanline overlay */
+.alphaswarm-scanline {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gold top border */
+.alphaswarm-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f59e0b, #fbbf24, #f59e0b, transparent);
+  z-index: 3;
+}
+
+/* Corner glow */
+.alphaswarm-card::after {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.alphaswarm-card:hover {
+  border-color: rgba(251, 191, 36, 0.65) !important;
+  box-shadow: 0 0 40px rgba(251, 191, 36, 0.2), 0 0 80px rgba(251, 191, 36, 0.06) !important;
+  transform: translateY(-5px) !important;
+}
+
+/* All card content above scanline */
+.alphaswarm-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scrolling ticker tape */
+.alphaswarm-ticker-tape {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(251, 191, 36, 0.06);
+  border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+  padding: 6px 0;
+  white-space: nowrap;
+}
+
+.alphaswarm-ticker-inner {
+  display: inline-block;
+  animation: alphaswarm-scroll 20s linear infinite;
+  font-size: 0.75rem;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding-left: 100%;
+}
+
+@keyframes alphaswarm-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.as-bull { color: #22c55e; }
+.as-bear { color: #ef4444; }
+.as-neut { color: #f59e0b; }
+
+/* Card inner content padding */
+.alphaswarm-card .project-header,
+.alphaswarm-card .project-description,
+.alphaswarm-card .alphaswarm-tagline,
+.alphaswarm-card .alphaswarm-features,
+.alphaswarm-card .alphaswarm-footer,
+.alphaswarm-card .alphaswarm-desc {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.alphaswarm-card .project-header { padding-top: 28px; }
+
+.alphaswarm-title {
+  color: #fbbf24 !important;
+  font-size: 2rem !important;
+  font-family: 'Courier New', monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.6);
+  margin-bottom: 10px !important;
+}
+
+.alphaswarm-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(251, 191, 36, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  padding: 3px 10px;
+  border-radius: 4px;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+  margin-left: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+.alphaswarm-tech {
+  background: rgba(251, 191, 36, 0.12) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(251, 191, 36, 0.3) !important;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem !important;
+}
+
+.alphaswarm-tagline {
+  font-size: 1rem !important;
+  color: #f59e0b !important;
+  font-style: italic;
+  margin-bottom: 10px !important;
+  margin-top: -4px !important;
+  border-left: 3px solid #f59e0b;
+  padding-left: 12px !important;
+  margin-left: 36px;
+}
+
+.alphaswarm-desc {
+  color: #8b9499 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.alphaswarm-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 18px 0 22px;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+  background: rgba(251, 191, 36, 0.04);
+  border-top: 1px solid rgba(251, 191, 36, 0.15);
+  border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+}
+
+.alphaswarm-feature-item {
+  font-size: 0.88rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.alphaswarm-feature-item strong {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.alphaswarm-footer {
+  border-top: 1px solid rgba(251, 191, 36, 0.2) !important;
+  padding-top: 18px !important;
+  padding-bottom: 24px !important;
+}
+
+.alphaswarm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fbbf24 !important;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease !important;
+}
+
+.alphaswarm-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.8);
+  transform: translateX(5px) !important;
+}
+
+/* --- Index page: AlphaSwarm highlight card --- */
+.alphaswarm-highlight-card {
+  background: #0a0c0f !important;
+  border: 1px solid rgba(251, 191, 36, 0.35) !important;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.alphaswarm-highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f59e0b, #fbbf24, transparent);
+  z-index: 1;
+}
+
+.alphaswarm-highlight-card:hover {
+  border-color: rgba(251, 191, 36, 0.7) !important;
+  box-shadow: 0 20px 50px rgba(251, 191, 36, 0.18) !important;
+}
+
+.alphaswarm-highlight-card .highlight-icon,
+.alphaswarm-highlight-card h3,
+.alphaswarm-highlight-card p,
+.alphaswarm-highlight-card a {
+  position: relative;
+  z-index: 2;
+}
+
+.alphaswarm-highlight-card h3 {
+  color: #fbbf24 !important;
+}
+
+.alphaswarm-highlight-card p {
+  color: #9ca3af !important;
+}
+
+.alphaswarm-tagline-small {
+  color: #f59e0b !important;
+}
+
+.alphaswarm-hl-ticker {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.alphaswarm-hl-ticker span:nth-child(odd) {
+  color: #22c55e;
+}
+.alphaswarm-hl-ticker span:nth-child(even) {
+  color: #ef4444;
+}
+.alphaswarm-hl-ticker span:nth-child(5),
+.alphaswarm-hl-ticker span:nth-child(6) {
+  color: #f59e0b;
+}
+
+.alphaswarm-hl-link {
+  color: #fbbf24 !important;
+  font-weight: 600;
+}
+
+.alphaswarm-hl-link:hover {
+  color: #fff !important;
+}
+
+[data-theme="light"] .alphaswarm-highlight-card {
+  background: #111318 !important;
+}
+
+[data-theme="light"] .alphaswarm-card {
+  background: #0a0c0f !important;
+}
+
+@media (max-width: 768px) {
+  .alphaswarm-card .project-header,
+  .alphaswarm-card .project-description,
+  .alphaswarm-card .alphaswarm-tagline,
+  .alphaswarm-card .alphaswarm-features,
+  .alphaswarm-card .alphaswarm-footer,
+  .alphaswarm-card .alphaswarm-desc {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .alphaswarm-card .alphaswarm-tagline {
+    margin-left: 20px;
+  }
+  .alphaswarm-title {
+    font-size: 1.5rem !important;
+    letter-spacing: 1px;
+  }
+  .alphaswarm-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   BINARY BRANCH — Mnemosyne's Scalpel story block
+   ========================================================================== */
+
+/* Inline story title mention (index page highlight card) */
+.bb-story-title {
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Story block inside the portfolio card */
+.bb-story-block {
+  margin: 20px 0 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  background: rgba(0, 255, 65, 0.03);
+  position: relative;
+}
+
+.bb-story-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(to bottom, #00ff41, transparent);
+}
+
+.bb-story-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.bb-story-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  color: rgba(0, 255, 65, 0.5);
+  letter-spacing: 0.08em;
+}
+
+.bb-story-status {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  color: #00ff41;
+  letter-spacing: 0.05em;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+.bb-story-title-line {
+  font-family: 'Courier New', monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.4);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.bb-story-desc {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 0.88rem !important;
+  color: rgba(0, 255, 65, 0.65) !important;
+  line-height: 1.7 !important;
+  margin: 0 0 14px !important;
+}
+
+.bb-story-desc em {
+  color: rgba(0, 255, 65, 0.85);
+  font-style: italic;
+}
+
+.bb-story-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bb-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: rgba(0, 255, 65, 0.6);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  padding: 3px 10px;
+  letter-spacing: 0.04em;
+}
