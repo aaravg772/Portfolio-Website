@@ -1,373 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio | Aarav Goel</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html"><img src="photos/1.png" alt="" class="logo mode-light"><img src="photos/2.png" alt="" class="logo mode-dark"></a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="art.html">Art</a></li>
-                </ul>
-            </nav>
-            <div class="nav-right-wrapper"><button id="theme-toggle" class="theme-btn">🌙</button></div>
-        </header>
-        <main class="portfolio-page">
-            <section class="portfolio-hero reveal">
-                <h1>Portfolio</h1>
-                <p class="portfolio-subtitle">A showcase of my achievements, projects, and technical skills</p>
-            </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Aarav Goel</title>
+  <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){ const s=localStorage.getItem('ag-theme')||'dark'; document.documentElement.setAttribute('data-theme',s); })();
+  </script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
 
-            <section class="awards-section">
-                <h2 class="reveal">Awards & Achievements</h2>
-                <div class="awards-grid">
-                    <div class="award-card reveal">
-                        <div class="award-year">2024</div>
-                        <h3>Grade 9 Pascal Distinction</h3>
-                        <p class="award-description">Earned distinction in the Waterloo mathematics contest, demonstrating strong problem-solving abilities in Grade 9.</p>
-                        <div class="award-category">Mathematics</div>
-                    </div>
-                    <div class="award-card reveal">
-                        <div class="award-year">2025</div>
-                        <h3>Grade 10 CIMC Distinction</h3>
-                        <p class="award-description">Achieved distinction and placed 5th in my school in the Canadian Intermediate Mathematics Contest.</p>
-                        <div class="award-category">Mathematics</div>
-                    </div>
-                    <div class="award-card reveal">
-                        <div class="award-year">2025</div>
-                        <h3>UTHSDC 8th Place</h3>
-                        <p class="award-description">Placed 8th out of 100+ participants at the University of Toronto High School Design Competition. Developed innovative solutions for TTC flooding challenges.</p>
-                        <div class="award-category">Engineering</div>
-                    </div>
-                </div>
-            </section>
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="photos/1.png" alt="" class="logo mode-light">
+        <img src="photos/2.png" alt="" class="logo mode-dark">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="art.html" class="nav-link">Art</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
 
-            <section class="projects-section">
-                <h2 class="reveal">My Projects</h2>
-                <p class="section-description reveal">A collection of personal projects showcasing my programming skills and creativity</p>
-                
-                <div class="projects-grid">
-                    <div class="project-card alphaswarm-card reveal">
-                        <div class="alphaswarm-scanline"></div>
-                        <div class="alphaswarm-ticker-tape">
-                            <div class="alphaswarm-ticker-inner">
-                                <span class="as-bull">▲ NVDA +3.2%</span>&nbsp;&nbsp;
-                                <span class="as-bear">▼ META -1.1%</span>&nbsp;&nbsp;
-                                <span class="as-bull">▲ AAPL +0.8%</span>&nbsp;&nbsp;
-                                <span class="as-neut">━ TSLA 0.0%</span>&nbsp;&nbsp;
-                                <span class="as-bull">▲ MSFT +2.4%</span>&nbsp;&nbsp;
-                                <span class="as-bear">▼ AMZN -0.6%</span>&nbsp;&nbsp;
-                                <span class="as-bull">▲ GOOG +1.9%</span>&nbsp;&nbsp;
-                                <span class="as-neut">━ SPY +0.1%</span>&nbsp;&nbsp;
-                                <span class="as-bull">▲ NVDA +3.2%</span>&nbsp;&nbsp;
-                                <span class="as-bear">▼ META -1.1%</span>&nbsp;&nbsp;
-                                <span class="as-bull">▲ AAPL +0.8%</span>&nbsp;&nbsp;
-                                <span class="as-neut">━ TSLA 0.0%</span>&nbsp;&nbsp;
-                            </div>
-                        </div>
-                        <div class="project-header">
-                            <h3 class="alphaswarm-title">AlphaSwarm <span class="alphaswarm-badge">v1.0</span></h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge alphaswarm-tech">Python</span>
-                                <span class="tech-badge alphaswarm-tech">FastAPI</span>
-                                <span class="tech-badge alphaswarm-tech">Groq AI</span>
-                                <span class="tech-badge alphaswarm-tech">Multi-Agent</span>
-                                <span class="tech-badge alphaswarm-tech">Live Web Search</span>
-                                <span class="tech-badge alphaswarm-tech">Technical Analysis</span>
-                            </div>
-                        </div>
-                        <p class="alphaswarm-tagline">Intelligence, Not Just Answers.</p>
-                        <p class="project-description alphaswarm-desc">A multi-agent AI investment research platform that dispatches up to 18 specialist agents to simultaneously search the live web. Agents debate, cross-examine each other's claims, and run real-time technical analysis — synthesizing everything into a structured investment memo with a BULLISH, BEARISH, or NEUTRAL verdict and confidence score.</p>
-                        <div class="alphaswarm-features">
-                            <div class="alphaswarm-feature-item">📡 <strong>18 Specialist Agents</strong> — Finance, risk, competition, sentiment & more, running concurrently</div>
-                            <div class="alphaswarm-feature-item">📈 <strong>Technical Analysis</strong> — RSI, MACD, Bollinger Bands, S/R levels, candlestick patterns (free, no API calls)</div>
-                            <div class="alphaswarm-feature-item">⚔️ <strong>Cross-Examination</strong> — Agents verify each other's claims and surface contradictions</div>
-                            <div class="alphaswarm-feature-item">🛡️ <strong>Hallucination Guard</strong> — Flags unsourced claims before synthesis to keep output trustworthy</div>
-                            <div class="alphaswarm-feature-item">📋 <strong>Investment Memo</strong> — Structured output: bull/bear thesis, key risks, catalysts, and a final verdict</div>
-                            <div class="alphaswarm-feature-item">⚡ <strong>Daily Budget System</strong> — Built-in compound call tracking with configurable hard limits</div>
-                        </div>
-                        <div class="project-footer alphaswarm-footer">
-                            <a href="https://github.com/aaravg772/AlphaSwarm" class="alphaswarm-link" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card binarybranch-card reveal">
-                        <div class="project-header">
-                            <h3 class="binarybranch-title">Binary Branch</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge binarybranch-tech">Next.js</span>
-                                <span class="tech-badge binarybranch-tech">Supabase</span>
-                                <span class="tech-badge binarybranch-tech">Google OAuth</span>
-                                <span class="tech-badge binarybranch-tech">Tailwind CSS</span>
-                                <span class="tech-badge binarybranch-tech">Node Logic</span>
-                                <span class="tech-badge binarybranch-tech">Vercel</span>
-                            </div>
-                        </div>
-                        <p class="binarybranch-tagline">The Architecture of Consequent Narratives</p>
-                        <p class="project-description">A custom-built, node-based storytelling engine designed for immersive branching experiences. Treats every chapter as a logic gate, where decisions are permanently recorded to persistent player profiles. Features a custom schema for complex non-linear storytelling.</p>
-                        <div class="binarybranch-features">
-                            <div class="binarybranch-feature-item">🔄 <strong>Persistent Progress</strong> — Supabase integration for auto-resume exactly where you left off</div>
-                            <div class="binarybranch-feature-item">🔐 <strong>State-Gated Access</strong> — Robust OAuth with single-admin suite for node building</div>
-                            <div class="binarybranch-feature-item">🧶 <strong>Node Logic</strong> — Relational database linking chapters via complex choices</div>
-                            <div class="binarybranch-feature-item">⚖️ <strong>Alignment System</strong> — Silent tracking of choices to categorize playstyle & unlock lore</div>
-                        </div>
-                        <div class="bb-story-block">
-                            <div class="bb-story-header">
-                                <span class="bb-story-label">// CURRENT_STORY</span>
-                                <span class="bb-story-status">● LIVE</span>
-                            </div>
-                            <div class="bb-story-title-line">Mnemosyne's Scalpel</div>
-                            <p class="bb-story-desc">A branching dystopian story set in Nihilgard. You play as Kaelen, an auditor who has been erasing people's corrupted memories for a living for eight years. When an extinct flower materializes in your pocket after a routine Dive, the cost of silence starts to exceed the cost of speaking. A story about complicity, memory, and what happens when the truth refuses to stay deleted.</p>
-                            <div class="bb-story-tags">
-                                <span class="bb-tag">Dystopian</span>
-                                <span class="bb-tag">1 Chapter Live</span>
-                                <span class="bb-tag">Branching Paths</span>
-                                <span class="bb-tag">Ongoing</span>
-                            </div>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://binary-branch.vercel.app/" class="binarybranch-link" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                Enter Mainframe
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card schoolos-card reveal">
-                        <div class="schoolos-shimmer"></div>
-                        <div class="project-header">
-                            <h3 class="schoolos-title">SchoolOS <span class="schoolos-version">v0.1.3 Open Beta</span></h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge schoolos-tech">Next.js</span>
-                                <span class="tech-badge schoolos-tech">Supabase</span>
-                                <span class="tech-badge schoolos-tech">Google OAuth</span>
-                                <span class="tech-badge schoolos-tech">AI</span>
-                                <span class="tech-badge schoolos-tech">Tailwind CSS</span>
-                                <span class="tech-badge schoolos-tech">Vercel</span>
-                            </div>
-                        </div>
-                        <p class="schoolos-tagline">The Academic Command Center for the Modern Student</p>
-                        <p class="project-description">A full-stack AI-powered productivity platform for students. Automates scheduling via PDF calendar parsing, generates AI flashcards from uploaded notes, gamifies focus sessions with XP tracking, and predicts GPA trends with goal-weighted analytics.</p>
-                        <div class="schoolos-features">
-                            <div class="schoolos-feature-item">🧠 <strong>Synapse Planner</strong> — Auto-parses school PDF calendars + Advanced schedule mechanics</div>
-                            <div class="schoolos-feature-item">📝 <strong>Meridian Notes</strong> — Upload notes → AI flashcards </div>
-                            <div class="schoolos-feature-item">⏱️ <strong>FlowState Focus</strong> — Gamified sessions with XP & burnout prevention</div>
-                            <div class="schoolos-feature-item">🎯 <strong>Goals</strong> — Generate effective study roadmaps</div>
-                            <div class="schoolos-feature-item">📊 <strong>Clarity Analytics</strong> — GPA prediction & Study Statistics</div>
-                        </div>
-                        <div class="project-footer schoolos-footer">
-                            <a href="https://schoolos-black.vercel.app/" class="project-link schoolos-link" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                Launch SchoolOS
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>BlackJack Game</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">GUI</span>
-                            </div>
-                        </div>
-                        <p class="project-description">A complete BlackJack game implementation with both visual and text-based interfaces. Features full game logic, multiple play modes, and clean code architecture.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/BlackJack-Total" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+  <div class="mobile-overlay" id="mobile-overlay">
+    <button class="overlay-close" id="overlay-close">×</button>
+    <nav class="overlay-nav">
+      <a href="index.html" class="overlay-link" style="--i:0">Home</a>
+      <a href="about.html" class="overlay-link" style="--i:1">About</a>
+      <a href="portfolio.html" class="overlay-link" style="--i:2">Portfolio</a>
+      <a href="contact.html" class="overlay-link" style="--i:3">Contact</a>
+      <a href="art.html" class="overlay-link" style="--i:4">Art</a>
+    </nav>
+  </div>
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>Text-To-Num Converter</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">NLP</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Intelligent text parser that converts written numbers in English to their numerical equivalents. Handles complex number formats and edge cases.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/Text-To-Num" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+  <main>
+    <div class="page-hero reveal">
+      <h1>Portfolio</h1>
+      <p>A showcase of my achievements, projects, and technical skills</p>
+    </div>
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>Monopoly Game</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Game Dev</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Text-based Monopoly implementation supporting up to 8 players. Features property trading, rent calculations, and complete game mechanics.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/Monopoly" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+    <div class="portfolio-page-main">
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>UNO Card Game</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">AI</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Text-based UNO game featuring 3 AI opponents with strategic decision-making algorithms. Includes all official UNO rules and special cards.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/uno" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+      <section class="awards-section">
+        <h2 class="reveal">Awards &amp; Achievements</h2>
+        <div class="awards-grid">
+          <div class="award-card reveal" style="--si:0">
+            <div class="award-year">2024</div>
+            <h3>Grade 9 Pascal Distinction</h3>
+            <p>Earned distinction in the Waterloo mathematics contest, demonstrating strong problem-solving abilities in Grade 9.</p>
+            <span class="award-category">Mathematics</span>
+          </div>
+          <div class="award-card reveal" style="--si:1">
+            <div class="award-year">2025</div>
+            <h3>Grade 10 CIMC Distinction</h3>
+            <p>Achieved distinction and placed 5th in my school in the Canadian Intermediate Mathematics Contest.</p>
+            <span class="award-category">Mathematics</span>
+          </div>
+          <div class="award-card reveal" style="--si:2">
+            <div class="award-year">2025</div>
+            <h3>UTHSDC 8th Place</h3>
+            <p>Placed 8th out of 100+ participants at the University of Toronto High School Design Competition. Developed innovative solutions for TTC flooding challenges.</p>
+            <span class="award-category">Engineering</span>
+          </div>
+        </div>
+      </section>
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>Pomodoro Timer</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Productivity</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Productivity tool implementing the Pomodoro Technique with 25-minute work sessions and 5-minute breaks. Helps maintain focus and prevent burnout.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/Pomodoro" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+      <section class="projects-section">
+        <h2 class="reveal">My Projects</h2>
+        <p class="section-description reveal">A collection of personal projects showcasing my programming skills and creativity</p>
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>ASCII Art Converter</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Web</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Web-based tool that converts text into various ASCII art styles. Python backend handles text processing and style generation.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/Ascii-converter-web-" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="game">Game</button>
+          <button class="filter-btn" data-filter="finance">Finance</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+        </div>
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>Interest Calculator</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Finance</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Financial tool with real-time currency conversion capabilities. Calculates compound interest across different currencies and time periods.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/Interest-Calculator" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
+        <div class="featured-projects">
 
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>Cookie Clicker Bot</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Automation</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Automation script for the popular Cookie Clicker web game. Implements optimal clicking strategies and upgrade purchasing algorithms.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/Cookie-Clicker-Automater" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <h3>HackPrank Library</h3>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">CLI</span>
-                            </div>
-                        </div>
-                        <p class="project-description">Fun Python library that creates "hacker" visual effects in the terminal. Great for pranks and learning about command-line interfaces.</p>
-                        <div class="project-footer">
-                            <a href="https://github.com/aaravg772/hackprank" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            © 2026 Aarav Goel. All rights reserved.
-            <div class="social-links">
-                <a href="https://discord.com/users/832612557453393930" class="social-icon discord" aria-label="Discord">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/aaravg772/" class="social-icon instagram" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-                <a href="https://github.com/aaravg772" class="social-icon github" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
+          <div class="project-card alphaswarm-card reveal" data-tags="python,finance" style="--si:0">
+            <div class="alphaswarm-scanline"></div>
+            <div class="alphaswarm-ticker-tape">
+              <div class="alphaswarm-ticker-inner">
+                <span class="as-bull">▲ NVDA +3.2%</span>&nbsp;&nbsp;
+                <span class="as-bear">▼ META -1.1%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ AAPL +0.8%</span>&nbsp;&nbsp;
+                <span class="as-neut">━ TSLA 0.0%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ MSFT +2.4%</span>&nbsp;&nbsp;
+                <span class="as-bear">▼ AMZN -0.6%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ GOOG +1.9%</span>&nbsp;&nbsp;
+                <span class="as-neut">━ SPY +0.1%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ NVDA +3.2%</span>&nbsp;&nbsp;
+                <span class="as-bear">▼ META -1.1%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ AAPL +0.8%</span>&nbsp;&nbsp;
+                <span class="as-neut">━ TSLA 0.0%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ MSFT +2.4%</span>&nbsp;&nbsp;
+                <span class="as-bear">▼ AMZN -0.6%</span>&nbsp;&nbsp;
+                <span class="as-bull">▲ GOOG +1.9%</span>&nbsp;&nbsp;
+                <span class="as-neut">━ SPY +0.1%</span>&nbsp;&nbsp;
+              </div>
             </div>
-        </footer>
-    </body>
+            <div class="project-header" style="margin-top:1.2rem">
+              <h3 class="alphaswarm-title">AlphaSwarm <span class="alphaswarm-badge">v1.0</span></h3>
+              <div class="tech-stack">
+                <span class="tech-badge alphaswarm-tech">Python</span>
+                <span class="tech-badge alphaswarm-tech">FastAPI</span>
+                <span class="tech-badge alphaswarm-tech">Groq AI</span>
+                <span class="tech-badge alphaswarm-tech">Multi-Agent</span>
+                <span class="tech-badge alphaswarm-tech">Live Web Search</span>
+                <span class="tech-badge alphaswarm-tech">Technical Analysis</span>
+              </div>
+            </div>
+            <p class="alphaswarm-tagline">Intelligence, Not Just Answers.</p>
+            <p class="project-description alphaswarm-desc">A multi-agent AI investment research platform that dispatches up to 18 specialist agents to simultaneously search the live web. Agents debate, cross-examine each other's claims, and run real-time technical analysis, synthesizing everything into a structured investment memo with a BULLISH, BEARISH, or NEUTRAL verdict and confidence score.</p>
+            <div class="alphaswarm-features">
+              <div class="alphaswarm-feature-item"> <strong>18 Specialist Agents</strong> — Finance, risk, competition, sentiment &amp; more, running concurrently</div>
+              <div class="alphaswarm-feature-item"> <strong>Technical Analysis</strong> — RSI, MACD, Bollinger Bands, S/R levels, candlestick patterns</div>
+              <div class="alphaswarm-feature-item"> <strong>Cross-Examination</strong> — Agents verify each other's claims and surface contradictions</div>
+              <div class="alphaswarm-feature-item"> <strong>Hallucination Guard</strong> — Flags unsourced claims before synthesis to keep output trustworthy</div>
+              <div class="alphaswarm-feature-item"> <strong>Investment Memo</strong> — Structured output: bull/bear thesis, key risks, catalysts, and a final verdict</div>
+              <div class="alphaswarm-feature-item"> <strong>Daily Budget System</strong> — Built-in compound call tracking with configurable hard limits</div>
+            </div>
+            <div class="project-footer alphaswarm-footer">
+              <a href="https://github.com/aaravg772/AlphaSwarm" class="alphaswarm-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card binarybranch-card reveal" data-tags="web" style="--si:1">
+            <div class="project-header">
+              <h3 class="binarybranch-title">Binary Branch</h3>
+              <div class="tech-stack">
+                <span class="tech-badge binarybranch-tech">Next.js</span>
+                <span class="tech-badge binarybranch-tech">Supabase</span>
+                <span class="tech-badge binarybranch-tech">Google OAuth</span>
+                <span class="tech-badge binarybranch-tech">Tailwind CSS</span>
+                <span class="tech-badge binarybranch-tech">Node Logic</span>
+                <span class="tech-badge binarybranch-tech">Vercel</span>
+              </div>
+            </div>
+            <p class="binarybranch-tagline">The Architecture of Consequent Narratives</p>
+            <p class="project-description">A custom-built, node-based storytelling engine designed for immersive branching experiences. Treats every chapter as a logic gate, where decisions are permanently recorded to persistent player profiles. Features a custom schema for complex non-linear storytelling.</p>
+            <div class="binarybranch-features">
+              <div class="binarybranch-feature-item"> <strong>Persistent Progress</strong> — Supabase integration for auto-resume exactly where you left off</div>
+              <div class="binarybranch-feature-item"> <strong>State-Gated Access</strong> — Robust OAuth with single-admin suite for node building</div>
+              <div class="binarybranch-feature-item"> <strong>Node Logic</strong> — Relational database linking chapters via complex choices</div>
+              <div class="binarybranch-feature-item"> <strong>Alignment System</strong> — Silent tracking of choices to categorize playstyle &amp; unlock lore</div>
+            </div>
+            <div class="bb-story-block">
+              <div class="bb-story-header">
+                <span class="bb-story-label">// CURRENT_STORY</span>
+                <span class="bb-story-status">● LIVE</span>
+              </div>
+              <div class="bb-story-title-line">Mnemosyne's Scalpel</div>
+              <p class="bb-story-desc">A branching dystopian story set in Nihilgard. You play as Kaelen, an auditor who has been erasing people's corrupted memories for a living for eight years. When an extinct flower materializes in your pocket after a routine Dive, the cost of silence starts to exceed the cost of speaking. A story about complicity, memory, and what happens when the truth refuses to stay deleted.</p>
+              <div class="bb-story-tags">
+                <span class="bb-tag">Dystopian</span>
+                <span class="bb-tag">1 Chapter Live</span>
+                <span class="bb-tag">Branching Paths</span>
+                <span class="bb-tag">Ongoing</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://binary-branch.vercel.app/" class="binarybranch-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Enter Mainframe
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card schoolos-card reveal" data-tags="web" style="--si:2">
+            <div class="schoolos-shimmer"></div>
+            <div class="project-header">
+              <h3 class="schoolos-title">SchoolOS <span class="schoolos-version">v0.1.3 Open Beta</span></h3>
+              <div class="tech-stack">
+                <span class="tech-badge schoolos-tech">Next.js</span>
+                <span class="tech-badge schoolos-tech">Supabase</span>
+                <span class="tech-badge schoolos-tech">Google OAuth</span>
+                <span class="tech-badge schoolos-tech">AI</span>
+                <span class="tech-badge schoolos-tech">Tailwind CSS</span>
+                <span class="tech-badge schoolos-tech">Vercel</span>
+              </div>
+            </div>
+            <p class="schoolos-tagline">The Academic Command Center for the Modern Student</p>
+            <p class="project-description">A full-stack AI-powered productivity platform for students. Automates scheduling via PDF calendar parsing, generates AI flashcards from uploaded notes, gamifies focus sessions with XP tracking, and predicts GPA trends with goal-weighted analytics.</p>
+            <div class="schoolos-features">
+              <div class="schoolos-feature-item"> <strong>Synapse Planner</strong> — Auto-parses school PDF calendars + Advanced schedule mechanics</div>
+              <div class="schoolos-feature-item"> <strong>Meridian Notes</strong> — Upload notes → AI flashcards</div>
+              <div class="schoolos-feature-item"> <strong>FlowState Focus</strong> — Gamified sessions with XP &amp; burnout prevention</div>
+              <div class="schoolos-feature-item"> <strong>Goals</strong> — Generate effective study roadmaps</div>
+              <div class="schoolos-feature-item"> <strong>Clarity Analytics</strong> — GPA prediction &amp; Study Statistics</div>
+            </div>
+            <div class="project-footer">
+              <a href="https://schoolos-black.vercel.app/" class="schoolos-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Launch SchoolOS
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="projects-grid">
+
+            <div class="project-card reveal" data-tags="python,game" style="--si:0">
+            <div class="project-header">
+              <h3>BlackJack Game</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Game Dev</span>
+              </div>
+            </div>
+            <p class="project-description">A blackjack logic engine made in python, with a visual implementation</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/BlackJack-Total" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python,game" style="--si:0">
+            <div class="project-header">
+              <h3>Monopoly Game</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Game Dev</span>
+              </div>
+            </div>
+            <p class="project-description">Text-based Monopoly implementation supporting up to 8 players. Features property trading, rent calculations, and complete game mechanics.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/Monopoly" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python,game" style="--si:1">
+            <div class="project-header">
+              <h3>UNO Card Game</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">AI</span>
+              </div>
+            </div>
+            <p class="project-description">Text-based UNO game featuring 3 AI opponents with strategic decision-making algorithms. Includes all official UNO rules and special cards.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/uno" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python" style="--si:2">
+            <div class="project-header">
+              <h3>Pomodoro Timer</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Productivity</span>
+              </div>
+            </div>
+            <p class="project-description">Productivity tool implementing the Pomodoro Technique with 25-minute work sessions and 5-minute breaks. Helps maintain focus and prevent burnout.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/Pomodoro" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python,finance" style="--si:3">
+            <div class="project-header">
+              <h3>Interest Calculator</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Finance</span>
+              </div>
+            </div>
+            <p class="project-description">Financial tool with real-time currency conversion capabilities. Calculates compound interest across different currencies and time periods.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/Interest-Calculator" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python,automation" style="--si:4">
+            <div class="project-header">
+              <h3>Cookie Clicker Bot</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Automation</span>
+              </div>
+            </div>
+            <p class="project-description">Automation script for the popular Cookie Clicker web game. Implements optimal clicking strategies and upgrade purchasing algorithms.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/Cookie-Clicker-Automater" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python" style="--si:5">
+            <div class="project-header">
+              <h3>HackPrank Library</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">CLI</span>
+              </div>
+            </div>
+            <p class="project-description">Fun Python library that creates "hacker" visual effects in the terminal. Great for pranks and learning about command-line interfaces.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/hackprank" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-tags="python,web" style="--si:6">
+            <div class="project-header">
+              <h3>ASCII Art Converter</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Web</span>
+              </div>
+            </div>
+            <p class="project-description">Web-based tool that converts text into various ASCII art styles. Python backend handles text processing and style generation.</p>
+            <div class="project-footer">
+              <a href="https://github.com/aaravg772/Ascii-converter-web-" class="project-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top-line"></div>
+    <div class="footer-inner">
+      <div class="footer-mono">AG</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="art.html">Art</a>
+      </nav>
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://discord.com/users/832612557453393930" aria-label="Discord" class="social-icon discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aaravg772/" aria-label="Instagram" class="social-icon instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://github.com/aaravg772" aria-label="GitHub" class="social-icon github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+        <p class="footer-credit">Built by Aarav Goel · © <span id="current-year"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>

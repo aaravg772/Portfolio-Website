@@ -1,145 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Art | Aarav Goel</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">
-                    <img src="photos/1.png" alt="" class="logo mode-light">
-                    <img src="photos/2.png" alt="" class="logo mode-dark">
-                </a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="art.html" class="active">Art</a></li>
-                </ul>
-            </nav>
-            <div class="nav-right-wrapper"><button id="theme-toggle" class="theme-btn">🌙</button></div>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art | Aarav Goel</title>
+  <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){ const s=localStorage.getItem('ag-theme')||'dark'; document.documentElement.setAttribute('data-theme',s); })();
+  </script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
 
-        <main class="art-page">
-            <section class="portfolio-hero reveal">
-                <h1>Artistic Works</h1>
-                <p class="portfolio-subtitle">A collection of my recent anime sketches. I’ve started teaching myself the fundamentals of drawing now, I started off with reference tutorials/photos</p>
-                
-                <div class="art-disclaimer">
-                    <p><strong>Note:</strong> These sketches are created using professional tutorials or reference photography to improve my fundamental skills. All characters and original designs are property of their respective creators and animation studios, including <b style="color: white;">MAPPA, Wit Studio, Ufotable, and Toei Animation</b>.</p>
-                </div>
-            </section>
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="photos/1.png" alt="" class="logo mode-light">
+        <img src="photos/2.png" alt="" class="logo mode-dark">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="art.html" class="nav-link active">Art</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
 
-            <div class="manga-grid reveal">
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/gojo.png" alt="Gojo Satoru">
-                    <div class="panel-label">Gojo</div>
-                </div>
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/sukuna.jpg" alt="Ryomen Sukuna">
-                    <div class="panel-label">Sukuna</div>
-                </div>
-                <div class="manga-panel" onclick="openModal(this)">
-                    <img src="photos/toji.png" alt="Toji Fushiguro">
-                    <div class="panel-label">Toji</div>
-                </div>
+  <div class="mobile-overlay" id="mobile-overlay">
+    <button class="overlay-close" id="overlay-close">×</button>
+    <nav class="overlay-nav">
+      <a href="index.html" class="overlay-link" style="--i:0">Home</a>
+      <a href="about.html" class="overlay-link" style="--i:1">About</a>
+      <a href="portfolio.html" class="overlay-link" style="--i:2">Portfolio</a>
+      <a href="contact.html" class="overlay-link" style="--i:3">Contact</a>
+      <a href="art.html" class="overlay-link" style="--i:4">Art</a>
+    </nav>
+  </div>
 
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/eren.jpg" alt="Eren Yeager">
-                    <div class="panel-label">Eren</div>
-                </div>
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/levi.png" alt="Levi Ackerman">
-                    <div class="panel-label">Levi</div>
-                </div>
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/mikasa.png" alt="Mikasa Ackerman">
-                    <div class="panel-label">Mikasa</div>
-                </div>
+  <main>
+    <div class="art-page-main">
 
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/zoro.png" alt="Roronoa Zoro">
-                    <div class="panel-label">Zoro</div>
-                </div>
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/zoro_2.jpg" alt="Zoro Portrait">
-                    <div class="panel-label">Zoro: 103 Mercies Dragon Damnation</div>
-                </div>
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/sakamoto.png" alt="Sakamoto">
-                    <div class="panel-label">Sakamoto</div>
-                </div>
+      <section class="art-hero-section">
+        <h1 class="reveal">Art</h1>
+        <p class="reveal">I've started teaching myself the fundamentals of drawing now, moving away from references.</p>
+        <p class="art-disclaimer reveal">Note: These sketches are created using professional tutorials or reference photography to improve fundamental skills. All characters and original designs are property of their respective creators and animation studios, including MAPPA, Wit Studio, Ufotable, and Toei Animation.</p>
+      </section>
 
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/kokushibo.png" alt="Kokushibo">
-                    <div class="panel-label">Kokushibo</div>
-                </div>
-                <div class="manga-panel" onclick="openModal(this)">
-                    <img src="photos/muzan.png" alt="Muzan">
-                    <div class="panel-label">Muzan</div>
-                </div>
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/zenitsu.png" alt="Zenitsu">
-                    <div class="panel-label">Zenitsu</div>
-                </div>
+      <div class="manga-grid reveal">
 
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/aot_movie.png" alt="AOT Movie Scene">
-                    <div class="panel-label">AOT Movie Poster</div>
-                </div>
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/eren_grisha.png" alt="Eren and Grisha">
-                    <div class="panel-label">The Reiss Chapel</div>
-                </div>
-                <div class="manga-panel" onclick="openModal(this)">
-                    <img src="photos/eren_mikasa.png" alt="Eren and Mikasa">
-                    <div class="panel-label">"I've always hated you" - Eren</div>
-                </div>
-                <div class="manga-panel tilt-left" onclick="openModal(this)">
-                    <img src="photos/nanami.png" alt="Nanami">
-                    <div class="panel-label">Nanami</div>
-                </div>
-                <div class="manga-panel tilt-right" onclick="openModal(this)">
-                    <img src="photos/megumi.png" alt="Megumi">
-                    <div class="panel-label">Megumi</div>
-                </div>
-            </div>
-        </main>
-            <footer>
-                <p>© <span id="current-year"></span> Aarav Goel. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://discord.com/users/832612557453393930" class="social-icon discord" aria-label="Discord">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/>
-                        </svg>
-                    </a>
-                    
-                    <a href="https://www.instagram.com/aaravg772/" class="social-icon instagram" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    
-                    <a href="https://github.com/aaravg772" class="social-icon github" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                </div>
-            </footer>
-        <div id="artModal" class="modal">
-            <span class="close-modal">&times;</span>
-            <img class="modal-content" id="imgFull">
-        <div id="modalCaption"></div>
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="Gojo" data-desc="Satoru Gojo — the strongest sorcerer. Six Eyes, Infinity. One of his most popular and hype moments, after a fight with Toji, he finally gets a grasp of RCT (Reverse Curse Technique). Basically reviving himself from the dead and coming back for round 2 (a short one, where Toji becomes an apple).">
+          <img src="photos/gojo.png" alt="Jujutsu Kaisen">
+          <div class="panel-label">Gojo</div>
         </div>
-    </body>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="Sukuna" data-desc="Ryomen Sukuna, the King of Curses. One of my favorite sketches, primarily due to how clean it looks.">
+          <img src="photos/sukuna.jpg" alt="Jujutsu Kaisen">
+          <div class="panel-label">Sukuna</div>
+        </div>
+
+        <div class="manga-panel" onclick="openModal(this)" data-name="Toji" data-desc="Toji Fushiguro — no cursed energy, just pure physical prowess.">
+          <img src="photos/toji.png" alt="Jujutsu Kaisen">
+          <div class="panel-label">Toji</div>
+        </div>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="Eren" data-desc="Eren Yeager, the Usurper. Another one of my favorite sketches.">
+          <img src="photos/eren.jpg" alt="Attack on Titan">
+          <div class="panel-label">Eren</div>
+        </div>
+
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="Levi" data-desc="Levi Ackerman, humanity's strongest soldier. Loves cleanliness.">
+          <img src="photos/levi.png" alt="Attack on Titan">
+          <div class="panel-label">Levi</div>
+        </div>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="Mikasa" data-desc="Mikasa Ackerman. This is one of the ending scenes of AOT, where Mikasa is seen sitting next to the tree where eren was buried. I tried to get the same emotions from the actual scene, the eyes showing her grief and emptiness.">
+          <img src="photos/mikasa.png" alt="Attack on Titan">
+          <div class="panel-label">Mikasa</div>
+        </div>
+
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="Zoro" data-desc="Roronoa Zoro — The three sword master, no sense of direction.">
+          <img src="photos/zoro.png" alt="One Piece">
+          <div class="panel-label">Zoro</div>
+        </div>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="Zoro: 103 Mercies Dragon Damnation" data-desc="Zoro's 103 Mercies Dragon Damnation Move. One of the coolest moves in One Piece, used in Zoro's fight against King.">
+          <img src="photos/zoro_2.jpg" alt="One Piece">
+          <div class="panel-label">Zoro: 103 Mercies Dragon Damnation</div>
+        </div>
+
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="Sakamoto" data-desc="Sakamoto, a Retired assasion, convenience store owner, still causing waves in the Assasin world. This scene is the reveal of his transformation, in his fight against Boiled. The eyes took quite a while, I had to do many re-tries.">
+          <img src="photos/sakamoto.png" alt="Sakamoto Days">
+          <div class="panel-label">Sakamoto</div>
+        </div>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="Kokushibo" data-desc="Kokushibo — Upper Moon One. Six eyes were a serious pain, and shading all the hair took ages.">
+          <img src="photos/kokushibo.png" alt="Demon Slayer">
+          <div class="panel-label">Kokushibo</div>
+        </div>
+
+        <div class="manga-panel" onclick="openModal(this)" data-name="Muzan" data-desc="Kibutsuji Muzan, or should I say Micheal Jackson. This scene is his walk towards Ubuyashiki Mansion, completely aura-farming.">
+          <img src="photos/muzan.png" alt="Demon Slayer">
+          <div class="panel-label">Muzan</div>
+        </div>
+
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="Zenitsu" data-desc="Zenitsu Agatsuma - Someone stronger asleep. One of is coldest moments, when he goes again Kaigaku, a former accomplice who used to train under the same master. Kaigaku turned into a demon, pushing his master to commit seppuku (suicide), driving Zenitsu to hate him, with their fight concluding in this showdown.">
+          <img src="photos/zenitsu.png" alt="Demon Slayer">
+          <div class="panel-label">Zenitsu</div>
+        </div>
+
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="AOT Movie Poster" data-desc="Attack on Titan: The Last Attack movie poster. A tribute to my favorite piece of media, took me almost a month.">
+          <img src="photos/aot_movie.png" alt="Attack on Titan">
+          <div class="panel-label">AOT Movie Poster</div>
+        </div>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="The Reiss Chapel" data-desc="Eren and Grisha in the Reiss Chapel. Eren manipulates his dad and drives his to kill the Royal Reiss family, Arguably the biggest plot twist of the show and one of the most emotionally devastating scenes in the entire series.">
+          <img src="photos/eren_grisha.png" alt="Attack on Titan">
+          <div class="panel-label">The Reiss Chapel</div>
+        </div>
+
+        <div class="manga-panel" onclick="openModal(this)" data-name="&quot;I've always hated you&quot; — Eren" data-desc="One of the most emotinally gut-punching scenes and a blatant lie.">
+          <img src="photos/eren_mikasa.png" alt="Attack on Titan">
+          <div class="panel-label">"I've always hated you" — Eren</div>
+        </div>
+
+        <div class="manga-panel tilt-left" onclick="openModal(this)" data-name="Nanami" data-desc="Kento Nanami — the most professional man in jujutsu, 1.5× overtime power-up. Getting ready to give an absolute beat-down to Haruta.">
+          <img src="photos/nanami.png" alt="Jujutsu Kaisen">
+          <div class="panel-label">Nanami</div>
+        </div>
+
+        <div class="manga-panel tilt-right" onclick="openModal(this)" data-name="Megumi" data-desc="Megumi Fushiguro - Potential Man.">
+          <img src="photos/megumi.png" alt="Jujutsu Kaisen">
+          <div class="panel-label">Megumi</div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div id="artModal" class="modal">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous">‹</button>
+    <button class="modal-nav modal-next" id="modalNext" aria-label="Next">›</button>
+    <img class="modal-content" id="imgFull" alt="">
+    <div id="modalCaption"></div>
+    <div id="modalSeries"></div>
+    <div id="modalDesc"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top-line"></div>
+    <div class="footer-inner">
+      <div class="footer-mono">AG</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="art.html">Art</a>
+      </nav>
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://discord.com/users/832612557453393930" aria-label="Discord" class="social-icon discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aaravg772/" aria-label="Instagram" class="social-icon instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://github.com/aaravg772" aria-label="GitHub" class="social-icon github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+        <p class="footer-credit">Built by Aarav Goel · © <span id="current-year"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>

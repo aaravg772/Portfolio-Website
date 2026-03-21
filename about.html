@@ -1,323 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About | Aarav Goel</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Open+Sans&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-        <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html"><img src="photos/1.png" alt="" class="logo mode-light"><img src="photos/2.png" alt="" class="logo mode-dark"></a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="art.html">Art</a></li>
-                </ul>
-                <div class="nav-right-wrapper">
-                    <ul class="skip-links">
-                        <li><a href="#sports-section" class="skip-link">Sports</a></li>
-                        <li><a href="#experience-section" class="skip-link">Experience</a></li>
-                        <li><a href="#clubs-section" class="skip-link">Clubs</a></li>
-                        <li><a href="#hobbies-section" class="skip-link">Hobbies</a></li>
-                        <li><a href="#favorite-media" class="skip-link">Favorites</a></li>
-                    </ul>
-                    <button id="theme-toggle" class="theme-btn">🌙</button> 
-                </div>
-            </nav>
-        </header>
-        <main class="about-page">
-            <section class="about-hero reveal">
-                <h1>About Me</h1>
-                <p>I'm a creative individual passionate about business, finance, art and computer science. With experience in computer science and finance, I enjoy building things and learning more! I'm also quite athletic and enjoy racquet sports like tennis and badminton!</p>
-            </section>
-            <section id="educational-timeline" class="apple-timeline-section">
-                <h2 class="timeline-title">My Educational Journey</h2>
-                
-                <div class="scroll-timeline-container">
-                    <div class="scroll-timeline-item" data-index="0">
-                        <div class="scroll-timeline-content">
-                            <div class="timeline-year-badge">2019</div>
-                            <h3>Moved to Canada 🇨🇦</h3>
-                            <h4>Davisville Junior Public School</h4>
-                            <p>Started my Canadian education journey! Placed in Grade 3 for two weeks (though I should have been in Grade 2), which put me a grade ahead. Completed Grade 4 before the pandemic changed everything.</p>
-                            <div class="timeline-pill">Elementary School</div>
-                        </div>
-                    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Aarav Goel</title>
+  <link rel="shortcut icon" type="image/x-icon" href="photos/1.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){ const s=localStorage.getItem('ag-theme')||'dark'; document.documentElement.setAttribute('data-theme',s); })();
+  </script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
 
-                    <div class="scroll-timeline-item" data-index="1">
-                        <div class="scroll-timeline-content">
-                            <div class="timeline-year-badge">2020-2021</div>
-                            <h3>The COVID Era</h3>
-                            <h4>Davisville JPS & Hodgson MS</h4>
-                            <p>Completed Grade 5 online at Davisville, then started Grade 6 at Hodgson Middle School online.</p>
-                            <div class="timeline-pill">Online Learning</div>
-                        </div>
-                    </div>
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="photos/1.png" alt="" class="logo mode-light">
+        <img src="photos/2.png" alt="" class="logo mode-dark">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="art.html" class="nav-link">Art</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
 
-                    <div class="scroll-timeline-item" data-index="2">
-                        <div class="scroll-timeline-content">
-                            <div class="timeline-year-badge">2021-2023</div>
-                            <h3>Middle School Years</h3>
-                            <h4>Hodgson Middle School</h4>
-                            <p>Attended Hodgson for the full 3 years. Started learning web development in 2021, discovered my passion for coding, and began building projects. Started playing volleyball and joined the school team in Grade 7.</p>
-                            <div class="timeline-pill">Growth & Discovery</div>
-                        </div>
-                    </div>
+  <div class="mobile-overlay" id="mobile-overlay">
+    <button class="overlay-close" id="overlay-close">×</button>
+    <nav class="overlay-nav">
+      <a href="index.html" class="overlay-link" style="--i:0">Home</a>
+      <a href="about.html" class="overlay-link" style="--i:1">About</a>
+      <a href="portfolio.html" class="overlay-link" style="--i:2">Portfolio</a>
+      <a href="contact.html" class="overlay-link" style="--i:3">Contact</a>
+      <a href="art.html" class="overlay-link" style="--i:4">Art</a>
+    </nav>
+  </div>
 
-                    <div class="scroll-timeline-item" data-index="3">
-                        <div class="scroll-timeline-content">
-                            <div class="timeline-year-badge">2023-2024</div>
-                            <h3>Pre-IB Program</h3>
-                            <h4>Victoria Park CI</h4>
-                            <p>Attended Pre-IB Grade 9 at VPCI. Earned Grade 9 Pascal Distinction in the Waterloo math contest. Made many wonderful friends and challenged myself academically.</p>
-                            <div class="timeline-pill">Grade 9</div>
-                        </div>
-                    </div>
+  <main>
+    <div class="about-page-main">
 
-                    <div class="scroll-timeline-item" data-index="4">
-                        <div class="scroll-timeline-content">
-                            <div class="timeline-year-badge">2024-Present</div>
-                            <h3>Current Chapter</h3>
-                            <h4>North Toronto CI</h4>
-                            <p>Currently in Grade 10! Earned Grade 10 CIMC Distinction (5th in school) and placed 8th out of 100+ at UTHSDC. Active in Investment Club, Aerospace Club (Executive), Debate, and more. Building skills for my goal of studying Finance at UofT.</p>
-                            <div class="timeline-pill">Grade 10</div>
-                        </div>
-                    </div>
 
-                    <div class="scroll-timeline-item future-timeline-item" data-index="5">
-                        <div class="scroll-timeline-content">
-                            <div class="timeline-year-badge future-badge">Future Goal</div>
-                            <h3>University of Toronto</h3>
-                            <h4>Finance Major | Business & CS Minors</h4>
-                            <p>Planning to major in Finance with minors in Business and Computer Science. Combining my passion for financial markets with technical skills to build a strong foundation for my future career.</p>
-                            <div class="timeline-pill future-pill">The Goal</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <section class="about-hero-section">
+        <h1 class="page-title reveal">About Me</h1>
+        <p class="about-intro reveal">I'm a creative individual passionate about business, finance, art and computer science. With experience in computer science and finance, I enjoy building things and learning more! I'm also quite athletic and enjoy racquet sports like tennis and badminton!</p>
+        <blockquote class="about-pullquote reveal">
+          "The parts of you they couldn't optimize are the only parts that were ever really yours."
+          <cite>— <em>Mnemosyne's Scalpel</em>, in progress</cite>
+        </blockquote>
+      </section>
 
-            <section id="sports-section" class="sports-section">
-                <h2 class="reveal">Favorite Sports</h2>
-                <div class="sports-grid">
-                    <div class="sport-card reveal">
-                        <div class="sport-image">
-                            <img src="photos/badminton.png" alt="Badminton equipment">
-                        </div>
-                        <h3>Badminton</h3>
-                        <p>I've been playing badminton since I was a kid, and I love the sport!</p>
-                        <div class="sport-tag">Racquet Sport</div>
-                    </div>
-                    <div class="sport-card reveal">
-                        <div class="sport-image">
-                            <img src="photos/tennis.png" alt="Tennis equipment" class="mode-light">
-                            <img src="photos/tennis_2.png" alt="Tennis equipment" class="mode-dark">
-                        </div>
-                        <h3>Tennis</h3>
-                        <p>I've been playing tennis since I was a kid, even attending an academy. Though I don't enjoy it as much anymore due to other sports I've picked up, I'm still quite fond of it!</p>
-                        <div class="sport-tag">Racquet Sport</div>
-                    </div>
-                    <div class="sport-card reveal">
-                        <div class="sport-image">
-                            <img src="photos/ultimate.png" alt="Ultimate Frisbee disc">
-                        </div>
-                        <h3>Ultimate Frisbee</h3>
-                        <p>I started playing ultimate frisbee in middle school, and from the first time I played it, I loved the game!</p>
-                        <div class="sport-tag">Team Sport</div>
-                    </div>
-                    <div class="sport-card reveal">
-                        <div class="sport-image">
-                            <img src="photos/71i0YRrC3lL.png" alt="Volleyball">
-                        </div>
-                        <h3>Volleyball</h3>
-                        <p>I started playing volleyball in grade 7 a few months before I joined the school team, and I love the sport so far!</p>
-                        <div class="sport-tag">Team Sport</div>
-                    </div>
-                </div>
-            </section>
+    </div>
 
-            <section id="experience-section" class="experience-section">
-                <h2 class="reveal">Experience & Skills</h2>
-                
-                <div class="experience-category reveal">
-                    <h3 class="category-title">
-                        <span class="category-icon">💻</span>
-                        Coding
-                    </h3>
-                    <div class="experience-grid">
-                        <div class="experience-card">
-                            <h4><a href="https://developer.apple.com/swift/" class="skill-link" target="_blank">Swift</a></h4>
-                            <p>I started self-learning Swift in 2022 and stopped soon after; I only know the basics.</p>
-                            <div class="skill-level">Beginner</div>
-                        </div>
-                        <div class="experience-card">
-                            <h4><a href="https://www.python.org/" class="skill-link" target="_blank">Python</a></h4>
-                            <p>I started learning Python from a course on Udemy, after that I had fun creating many projects in the language!</p>
-                            <div class="skill-level intermediate">Intermediate</div><br>
-                            <a href="portfolio.html" class="highlight-link">View Projects →</a>
-                        </div>
-                        <div class="experience-card">
-                            <h4>Full Stack Web Development</h4>
-                            <p>I started self-learning Full Stack Web Development in 2021 and have now created a few cool projects with it!</p>
-                            <div class="skill-level intermediate">Intermediate</div>
-                        </div>
-                    </div>
-                </div>
+    <div class="htl-wrapper" id="htl-wrapper">
+      <section class="apple-timeline-section" id="htl-section">
+        <h2 class="timeline-title">My Educational Journey</h2>
+        <p class="timeline-hint">Scroll sideways to explore →</p>
 
-                <div class="experience-category reveal">
-                    <h3 class="category-title">
-                        Volunteering
-                    </h3>
-                    <div class="experience-grid">
-                        <div class="experience-card">
-                            <h4>Peer Tutoring</h4>
-                            <p>I started peer-tutoring in the first semester of grade 10. Peer tutoring has helped me increase my confidence and better my time management. I was able to complete my work while teaching my peer. At first, I struggled with teaching but over time I started to learn and became effective at it.</p>
-                            <div class="volunteer-tag">Ongoing</div>
-                        </div>
-                        <div class="experience-card">
-                            <h4><a href="https://www.torontowaterfrontmarathon.com/" class="skill-link" target="_blank">TCS Waterfront Marathon 2024</a></h4>
-                            <p>I worked at a water station giving out water to runners!</p>
-                            <div class="volunteer-tag">2024</div>
-                        </div>
-                        <div class="experience-card">
-                            <h4><a href="https://www.torontowaterfrontmarathon.com/" class="skill-link" target="_blank">TCS Waterfront Marathon 2025</a></h4>
-                            <p>I worked at a water station giving out water to runners!</p>
-                            <div class="volunteer-tag">2025</div>
-                        </div>
-                        <div class="experience-card">
-                            <h4>NTCI Web Club</h4>
-                            <p>I worked on maintaining the school website.</p>
-                            <div class="volunteer-tag">School</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div class="htl-outer" id="htl-outer">
+          <div class="htl-track" id="htl-track">
 
-            <section id="clubs-section" class="clubs-section">
-                <h2 class="reveal">Clubs & Activities</h2>
-                <div class="clubs-grid">
-                    <div class="club-card reveal">
-                        <div class="club-icon">📈</div>
-                        <h3>Investment Club</h3>
-                        <p>I joined the Investment club to learn financial literacy and investing.</p>
-                        <div class="club-category">Finance</div>
-                    </div>
-                    <div class="club-card reveal">
-                        <div class="club-icon">🌐</div>
-                        <h3>NTCI Web Club</h3>
-                        <p>I joined the NTCI Web club to improve my web development skills. The goal of the club is to maintain the school website.</p>
-                        <div class="club-category">Technology</div>
-                    </div>
-                    <div class="club-card reveal">
-                        <div class="club-icon">🚀</div>
-                        <h3>Aerospace Club</h3>
-                        <p>I joined the Aerospace Club due to my interest in engineering and curiosity and was soon appointed as an Executive member. I have since led many lessons, worked on a model rocket and RC plane.</p>
-                        <div class="club-category executive">Executive Member</div>
-                    </div>
-                    <div class="club-card reveal">
-                        <div class="club-icon">🎤</div>
-                        <h3>Debate Club</h3>
-                        <p>I joined the Debate club to improve my communication skills and build confidence.</p>
-                        <div class="club-category">Communication</div>
-                    </div>
-                    <div class="club-card reveal">
-                        <div class="club-icon">👑</div>
-                        <h3>Leadership Club</h3>
-                        <p>I joined the Leadership club to improve my communication skills and build confidence.</p>
-                        <div class="club-category">Leadership</div>
-                    </div>
-                    <div class="club-card reveal">
-                        <div class="club-icon">🏸</div>
-                        <h3>Badminton Club</h3>
-                        <p>I joined the Badminton club to have fun and improve at badminton.</p>
-                        <div class="club-category">Sports</div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="hobbies-section" class="hobbies-section">
-                <h2 class="reveal">🎨 Hobbies & Interests</h2>
-                <div class="hobbies-grid">
-                    <div class="hobby-card reveal">
-                        <div class="hobby-icon">✏️</div>
-                        <h3>Sketching</h3>
-                        <p>I started sketching in grade 8, starting with videos and then moving to photo references. I'm now learning to draw on my own!</p>
-                        <div class="hobby-tag">Creative</div><br>
-                        <a href="art.html" class="highlight-link">View Art →</a>
-                    </div>
-                    <div class="hobby-card reveal">
-                        <div class="hobby-icon">📺</div>
-                        <h3>Anime</h3>
-                        <p>I started watching anime in grade 9 and my first ever anime was <a href="https://www.imdb.com/title/tt12343534/" class="inline-link" target="_blank">Jujutsu Kaisen</a></p>
-                        <div class="hobby-tag">Entertainment</div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="favorite-media" class="media-section">
-                <h2 class="reveal">Favorite Media</h2>
-                <div class="media-grid">
-                    <div class="media-card reveal">
-                        <div class="media-image">
-                            <img src="photos/aot.jpg" alt="Attack On Titan: Final Season Poster">
-                        </div>
-                        <div class="media-content">
-                            <h3><a href="https://www.imdb.com/title/tt2560140/" class="media-link" target="_blank">Attack On Titan</a></h3>
-                            <p>The second anime I ever watched and frankly, what really got me interested in the genre. To this day I believe it's one of the best pieces of TV/media on the planet.</p>
-                            <div class="media-category">Anime</div>
-                        </div>
-                    </div>
-                    <div class="media-card reveal">
-                        <div class="media-image">
-                            <img src="photos/81deUh9WvyL._AC_UF1000,1000_QL80_.jpg" alt="I Survived the Bombing of Pearl Harbor book cover">
-                        </div>
-                        <div class="media-content">
-                            <h3><a href="https://www.laurentarshis.com/i-survived" class="media-link" target="_blank">I Survived Book Series</a></h3>
-                            <p>I have read 3 books out of this series, and they are all wonderful so far!</p>
-                            <div class="media-category">Books</div>
-                        </div>
-                    </div>
-                    <div class="media-card reveal">
-                        <div class="media-image">
-                            <img src="photos/Oppenheimer_(film).jpg" alt="Oppenheimer movie poster">
-                        </div>
-                        <div class="media-content">
-                            <h3><a href="https://www.imdb.com/title/tt15398776/" class="media-link" target="_blank">Oppenheimer</a></h3>
-                            <p>Brilliant movie.</p>
-                            <div class="media-category">Film</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            © 2026 Aarav Goel. All rights reserved.
-            <div class="social-links">
-                <a href="https://discord.com/users/832612557453393930" class="social-icon discord" aria-label="Discord">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/aaravg772/" class="social-icon instagram" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-                <a href="https://github.com/aaravg772" class="social-icon github" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
+            <div class="htl-item htl-top">
+              <div class="htl-card">
+                <div class="timeline-year-badge">2019-2020</div>
+                <h3>Moved to Canada 🇨🇦</h3>
+                <h4>Davisville Junior Public School</h4>
+                <p>Started my Canadian education journey! Placed in Grade 3 for two weeks (I should have been in Grade 2), putting me a grade ahead. Completed Grade 4 before the pandemic changed everything.</p>
+                <span class="timeline-pill">Elementary School</span>
+              </div>
+              <div class="htl-stem"></div>
+              <div class="htl-dot"></div>
             </div>
-        </footer>
-    </body>
+
+            <div class="htl-item htl-bottom">
+              <div class="htl-dot"></div>
+              <div class="htl-stem"></div>
+              <div class="htl-card">
+                <div class="timeline-year-badge">2020–2021</div>
+                <h3>The COVID Era</h3>
+                <h4>Davisville JPS &amp; Hodgson MS</h4>
+                <p>Completed Grade 5 online at Davisville, then started Grade 6 at Hodgson Middle School online.</p>
+                <span class="timeline-pill">Online Learning</span>
+              </div>
+            </div>
+
+            <div class="htl-item htl-top">
+              <div class="htl-card">
+                <div class="timeline-year-badge">2021–2024</div>
+                <h3>Middle School</h3>
+                <h4>Hodgson Middle School</h4>
+                <p>Grades 7 and 8. Started volleyball, joined clubs, and found my footing in what I actually enjoy — coding, sports, art, and learning how things work.</p>
+                <span class="timeline-pill">Middle School</span>
+              </div>
+              <div class="htl-stem"></div>
+              <div class="htl-dot"></div>
+            </div>
+
+            <div class="htl-item htl-bottom">
+              <div class="htl-card">
+                <div class="timeline-year-badge">2024–2025</div>
+                <h3>Victoria Park CI</h3>
+                <h4>Pre-IB Program · Grade 19</h4>
+                <p>Attended Pre-IB Grade 9 at VPCI. Earned a Pascal Math Competition Distinction. Made many wonderful friends and challenged myself academically.</p>
+                <span class="timeline-pill">Middle School</span>
+              </div>
+              <div class="htl-stem"></div>
+              <div class="htl-dot"></div>
+            </div>
+
+            <div class="htl-item htl-top">
+              <div class="htl-dot"></div>
+              <div class="htl-stem"></div>
+              <div class="htl-card">
+                <div class="timeline-year-badge">2025–Now</div>
+                <h3>North Toronto CI</h3>
+                <p>Investment Club, Aerospace Club Executive, real projects, math contest distinctions, UTHSDC placement. A lot happens in a year.</p>
+                <span class="timeline-pill">High School</span>
+              </div>
+            </div>
+
+            <div class="htl-item htl-bottom">
+              <div class="htl-card">
+                <div class="timeline-year-badge future-badge">2027+</div>
+                <h3>University of Toronto</h3>
+                <h4>Finance · Business · Computer Science</h4>
+                <p>Finance major, Business and CS minors. Rotman School of Management.</p>
+                <span class="timeline-pill future-pill">The Plan ✦</span>
+              </div>
+              <div class="htl-stem"></div>
+              <div class="htl-dot htl-dot-future"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="about-page-main">
+
+      <section class="about-section" id="sports-section">
+        <h2 class="section-rule reveal">Favorite Sports</h2>
+        <div class="cards-grid reveal">
+          <div class="about-card">
+            <div class="about-card-img"><img src="photos/badminton.png" alt="Badminton equipment"></div>
+            <h3>Badminton</h3>
+            <p>I've been playing badminton since I was a kid, and I love the sport!</p>
+            <span class="about-tag">Racquet Sport</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-img">
+              <img src="photos/tennis.png" alt="Tennis equipment" class="mode-light">
+              <img src="photos/tennis_2.png" alt="Tennis equipment" class="mode-dark">
+            </div>
+            <h3>Tennis</h3>
+            <p>I've been playing tennis since I was a kid, even attending an academy. Though I don't enjoy it as much anymore due to other sports I've picked up, I'm still quite fond of it!</p>
+            <span class="about-tag">Racquet Sport</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-img"><img src="photos/ultimate.png" alt="Ultimate Frisbee disc"></div>
+            <h3>Ultimate Frisbee</h3>
+            <p>I started playing ultimate frisbee in middle school, and from the first time I played it, I loved the game!</p>
+            <span class="about-tag">Team Sport</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-img"><img src="photos/71i0YRrC3lL.png" alt="Volleyball"></div>
+            <h3>Volleyball</h3>
+            <p>I started playing volleyball in grade 7 a few months before I joined the school team, and I love the sport so far!</p>
+            <span class="about-tag">Team Sport</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="experience-section">
+        <h2 class="section-rule reveal">Experience &amp; Skills</h2>
+
+        <div class="exp-category reveal">
+          <p class="exp-cat-title">Coding</p>
+          <div class="cards-grid">
+            <div class="about-card">
+              <h4><a href="https://developer.apple.com/swift/" class="amber-link" target="_blank">Swift</a></h4>
+              <p>I started self-learning Swift in 2022 and stopped soon after; I only know the basics.</p>
+              <span class="skill-badge">Beginner</span>
+            </div>
+            <div class="about-card">
+              <h4><a href="https://www.python.org/" class="amber-link" target="_blank">Python</a></h4>
+              <p>I started learning Python from a course on Udemy, after that I had fun creating many projects in the language!</p>
+              <span class="skill-badge skill-badge--mid">Intermediate</span>
+              <a href="portfolio.html" class="about-card-link">View Projects →</a>
+            </div>
+            <div class="about-card">
+              <h4>Full Stack Web Development</h4>
+              <p>I started self-learning Full Stack Web Development in 2021 and have now created a few cool projects with it!</p>
+              <span class="skill-badge skill-badge--mid">Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-category reveal">
+          <p class="exp-cat-title">Volunteering</p>
+          <div class="cards-grid">
+            <div class="about-card">
+              <h4>Peer Tutoring</h4>
+              <p>I started peer-tutoring in the first semester of grade 10. Peer tutoring has helped me increase my confidence and better my time management. I was able to complete my work while teaching my peer. At first, I struggled with teaching but over time I started to learn and became effective at it.</p>
+              <span class="vol-tag">Ongoing</span>
+            </div>
+            <div class="about-card">
+              <h4><a href="https://www.torontowaterfrontmarathon.com/" class="amber-link" target="_blank">TCS Waterfront Marathon 2024</a></h4>
+              <p>I worked at a water station giving out water to runners!</p>
+              <span class="vol-tag">2024</span>
+            </div>
+            <div class="about-card">
+              <h4><a href="https://www.torontowaterfrontmarathon.com/" class="amber-link" target="_blank">TCS Waterfront Marathon 2025</a></h4>
+              <p>I worked at a water station giving out water to runners!</p>
+              <span class="vol-tag">2025</span>
+            </div>
+            <div class="about-card">
+              <h4><a href="https://northtorontoci.ca/" class="amber-link" target="_blank">NTCI Web Club</a></h4>
+              <p>I worked on maintaining the school website.</p>
+              <span class="vol-tag">School</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="clubs-section">
+        <h2 class="section-rule reveal">Clubs &amp; Activities</h2>
+        <div class="cards-grid reveal">
+          <div class="about-card">
+            <div class="about-card-icon">📈</div>
+            <h3>Investment Club</h3>
+            <p>I joined the Investment club to learn financial literacy and investing.</p>
+            <span class="about-tag">Finance</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌐</div>
+            <h3>NTCI Web Club</h3>
+            <p>I joined the NTCI Web club to improve my web development skills. The goal of the club is to maintain the school website.</p>
+            <span class="about-tag">Technology</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🚀</div>
+            <h3>Aerospace Club</h3>
+            <p>I joined the Aerospace Club due to my interest in engineering and curiosity and was soon appointed as an Executive member. I have since led many lessons, worked on a model rocket and RC plane.</p>
+            <span class="about-tag about-tag--exec">Executive Member</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🎤</div>
+            <h3>Debate Club</h3>
+            <p>I joined the Debate club to improve my communication skills and build confidence.</p>
+            <span class="about-tag">Communication</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">👑</div>
+            <h3>Leadership Club</h3>
+            <p>I joined the Leadership club to improve my communication skills and build confidence.</p>
+            <span class="about-tag">Leadership</span>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🏸</div>
+            <h3>Badminton Club</h3>
+            <p>I joined the Badminton club to have fun and improve at badminton.</p>
+            <span class="about-tag">Sports</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="hobbies-section">
+        <h2 class="section-rule reveal">🎨 Hobbies &amp; Interests</h2>
+        <div class="hobbies-row reveal">
+          <div class="about-card">
+            <div class="about-card-icon">✏️</div>
+            <h3>Sketching</h3>
+            <p>I started sketching in grade 8, starting with videos and then moving to photo references. I'm now learning to draw on my own!</p>
+            <span class="about-tag">Creative</span>
+            <a href="art.html" class="about-card-link">View Art →</a>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📺</div>
+            <h3>Anime</h3>
+            <p>I started watching anime in grade 9 and my first ever anime was <a href="https://www.imdb.com/title/tt12343534/" class="amber-link" target="_blank">Jujutsu Kaisen</a></p>
+            <span class="about-tag">Entertainment</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="favorite-media">
+        <h2 class="section-rule reveal">Favorite Media</h2>
+        <div class="media-row">
+          <div class="media-card-new reveal" style="--si:0">
+            <div class="media-poster"><img src="photos/aot.jpg" alt="Attack On Titan: Final Season Poster"></div>
+            <div class="media-info">
+              <span class="media-cat-tag">Anime</span>
+              <h3><a href="https://www.imdb.com/title/tt2560140/" class="media-title-link" target="_blank">Attack On Titan</a></h3>
+              <p>The second anime I ever watched and frankly, what really got me interested in the genre. To this day I believe it's one of the best pieces of TV/media on the planet.</p>
+            </div>
+          </div>
+          <div class="media-card-new reveal" style="--si:1">
+            <div class="media-poster"><img src="photos/81deUh9WvyL._AC_UF1000,1000_QL80_.jpg" alt="I Survived the Bombing of Pearl Harbor book cover"></div>
+            <div class="media-info">
+              <span class="media-cat-tag">Books</span>
+              <h3><a href="https://www.laurentarshis.com/i-survived" class="media-title-link" target="_blank">I Survived Book Series</a></h3>
+              <p>I have read 3 books out of this series, and they are all wonderful so far!</p>
+            </div>
+          </div>
+          <div class="media-card-new reveal" style="--si:2">
+            <div class="media-poster"><img src="photos/csmreze.jpg" alt="Chainsaw Man:Reze Arc movie poster"></div>
+            <div class="media-info">
+              <span class="media-cat-tag">Movie</span>
+              <h3><a href="https://www.imdb.com/title/tt30472557/" class="media-title-link" target="_blank">Chainsaw Man: Reze Arc</a></h3>
+              <p>The best movie I have ever watched, period. A beautiful tale of teenage love, with a bunch of action and magnificent animation, almost brought me to tears.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top-line"></div>
+    <div class="footer-inner">
+      <div class="footer-mono">AG</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="art.html">Art</a>
+      </nav>
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://discord.com/users/832612557453393930" aria-label="Discord" class="social-icon discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aaravg772/" aria-label="Instagram" class="social-icon instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://github.com/aaravg772" aria-label="GitHub" class="social-icon github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+        <p class="footer-credit">Built by Aarav Goel · © <span id="current-year"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
