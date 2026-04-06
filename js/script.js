@@ -1,4 +1,32 @@
 (function () {
+  const FIRST_VISIT_MIN_MS = 1800;
+  const isFirstVisit = !sessionStorage.getItem('ag-visited');
+
+  
+  if (isFirstVisit) sessionStorage.setItem('ag-visited', '1');
+
+  const loaderStart = Date.now();
+
+  function dismissLoader() {
+    const loader = document.getElementById('ag-loader');
+    if (!loader) return;
+    const elapsed   = Date.now() - loaderStart;
+    const minTime   = isFirstVisit ? FIRST_VISIT_MIN_MS : 0;
+    const remaining = Math.max(0, minTime - elapsed);
+    setTimeout(() => {
+      loader.classList.add('fade-out');
+      setTimeout(() => loader.remove(), 750);
+    }, remaining);
+  }
+
+  if (document.readyState === 'complete') {
+    dismissLoader();
+  } else {
+    window.addEventListener('load', dismissLoader);
+  }
+})();
+
+(function () {
   const saved = localStorage.getItem('ag-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', saved);
 })();
@@ -34,39 +62,39 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  // UNIVERSAL CARD REVEAL FRAMEWORK
-  //
-  // How it works:
-  //   1. Define CARD_SELECTORS — every "card" element type on the site.
-  //   2. For each card found, strip any old .reveal/.si state from
-  //      HTML, then assign a fresh --reveal-delay based on the card's
-  //      index among its siblings of the same type.
-  //   3. A single IntersectionObserver watches all cards and adds
-  //      .revealed when they enter the viewport.
-  //
-  // To add a new card type in the future: add its selector to CARD_SELECTORS.
-  // To change stagger speed: change STAGGER_MS.
-  // To change animation speed: change the transition duration in .reveal CSS.
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-  const STAGGER_MS = 120; // gap in ms between each sibling card appearing
+  const STAGGER_MS = 120; 
 
-  // Every distinct "card" type across the whole site
+  
   const CARD_SELECTORS = [
-    // Home
+    
     '.stat-card',
     '.bc',
-    // About
+    
     '.about-card',
     '.media-card-new',
-    // Portfolio
+    
     '.award-card',
     '.project-card',
-    // Contact
+    
     '.social-card',
     '.email-card',
-    // Standalone reveals (headings, intros, etc.)
+    
     '.page-hero',
     '.section-label',
     '.section-rule',
@@ -80,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.about-pullquote',
   ];
 
-  // STEP 1 — strip ALL existing .reveal classes from every element
-  // (both containers and individual cards) so we start totally clean
+  
+  
   document.querySelectorAll('.reveal').forEach(el => {
     el.classList.remove('reveal');
     el.style.removeProperty('--reveal-delay');
@@ -89,13 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.removeProperty('--ci');
   });
 
-  // STEP 2 — for each card selector, find all matching elements,
-  // group them by their parent, and assign staggered delays per group
+  
+  
   CARD_SELECTORS.forEach(selector => {
     const cards = Array.from(document.querySelectorAll(selector));
     if (!cards.length) return;
 
-    // Group by parent so siblings stagger together
+    
     const byParent = new Map();
     cards.forEach(card => {
       const key = card.parentElement;
@@ -111,15 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // STEP 3 — single observer watches everything
-  // Double rAF ensures browser has painted the initial hidden state
-  // before we start observing, so transitions actually play
+  
+  
+  
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
       observer.unobserve(el);
-      // Small base offset so even in-viewport elements animate on load
+      
       const ownDelay = parseFloat(el.style.getPropertyValue('--reveal-delay')) || 0;
       setTimeout(() => el.classList.add('revealed'), 60 + ownDelay);
     });
@@ -131,9 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ═══════════════════════════════════════════════════════════════
-  // SUSPENSE SHAFT
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
   const shaft = document.getElementById('suspense-shaft');
   if (shaft) {
     shaft.addEventListener('animationend', e => {
@@ -141,9 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  // COUNT-UP NUMBERS
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
   const countObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -165,9 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   document.querySelectorAll('.stat-num[data-target]').forEach(el => countObs.observe(el));
 
-  // ═══════════════════════════════════════════════════════════════
-  // BENTO 3D TILT
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
   document.querySelectorAll('.bc').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
@@ -178,9 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
 
-  // ═══════════════════════════════════════════════════════════════
-  // HORIZONTAL TIMELINE
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
   initHorizontalTimeline();
 
   function initHorizontalTimeline() {
@@ -231,9 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  // ART MODAL
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
   const artModal  = document.getElementById('artModal');
   const imgFull   = document.getElementById('imgFull');
   const modalCap  = document.getElementById('modalCaption');
@@ -288,9 +316,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  // PROJECT FILTER
-  // ═══════════════════════════════════════════════════════════════
+  
+  
+  
   const filterBtns   = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card[data-tags]');
 
